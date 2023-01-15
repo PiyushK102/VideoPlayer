@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="Vp.css">
+     <script src="vp.js" defer></script>
+     
+    <title>Video Player</title>
+</head>
+<body>
+                    <!--////////////////////////////////////// Video Player Code//////////////////////////////////////////////////////// -->
+
+                    <div id="screendiv">
+                        <video id="screen" data-volume-level="high">
+                            <source src="https://drive.google.com/uc?id=17fX93QQMP7njPQOnDocSz2VIwqGGJq8P" type="video/mp4">
+                        </video>
+                    
+                        <div id="controls">
+                            <div id="timer">
+                                <div class="currtime">0:00 </div>
+                                    /
+                                <div class="totaltime">00:00</div>
+                            </div>
+
+                            <button id="back">|◀</button>
+                            <button id="play" style="display:block;" >▶</button>
+                            <button id="pause" style="display:none;">◼</button>
+                            <button id="forward">▶|</button>
+                            <div id="volumectrl">
+                                <button id="volvalue" style="display:block">
+                                    😁
+                                </button>
+                                <button id="mute" style="display:none">
+                                    🤐
+                                </button>
+                                <input type="range" min="0" max="100" id="volslider">
+                            </div>
+                            <button id="minip" style="display:block;">◲</button>
+                            <button id="fullscr" style="display:block;">◸◹<br>◺◿</button>
+                        </div>
+                    </div>
+
+
+                    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+</body>
+</html>
