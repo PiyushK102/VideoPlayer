@@ -36,8 +36,7 @@ function togglePlayPause(){
 ///////////////////////----Screen Modes----////////////////////////////
 fullscrbtn.addEventListener("click",fullscreen)
 function fullscreen(){
-    document.getElementById("screen").id="screen-full"
-    document.getElementById("screendiv").id="screendiv-full"
+   document.getElementById("screen")="screen"?document.getElementById("screen").id="screen-full":document.getElementById("screen-full").id="screen"
 }
 //////////////////////////////////////////////////////////////////////
 ///////////////////////----Volume----////////////////////////////
