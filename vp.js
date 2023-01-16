@@ -38,17 +38,17 @@ fullscrbtn.addEventListener("click",fullscreen)
 function fullscreen(){
    if(fullscrbtn.addEventListener("click"==true))
    {
-    document.getElementById("screendiv").style.width="95vw"
-    document.getElementById("screendiv").style.height="85vh"
-    document.getElementById("screen").style.width="95vw"
-    document.getElementById("screen").style.height="85vh"
+    videocontainer.style.width="95vw"
+    videocontainer.style.height="85vh"
+    video.style.width="95vw"
+    video.style.height="85vh"
    }
    else if(fullscrbtn.addEventListener("dblclick"==true))
    {
-    document.getElementById("screendiv").style.width="80vw"
-    document.getElementById("screendiv").style.height="40vw"
-    document.getElementById("screen").style.width="80vw"
-    document.getElementById("screen").style.height="40vw"
+    videocontainer.style.width="80vw"
+    videocontainer.style.height="40vw"
+    video.style.width="80vw"
+    video.style.height="40vw"
    }
 }
 //////////////////////////////////////////////////////////////////////
