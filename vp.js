@@ -38,10 +38,12 @@ fullscrbtn.addEventListener("click",fullscreen)
 function fullscreen(){
    if(fullscrbtn.addEventListener("click"==true))
    {
+    document.getElementById("screendiv").id="screendiv-full"
     document.getElementById("screen").id="screen-full"
    }
    else if(fullscrbtn.addEventListener("dblclick"==true))
    {
+    document.getElementById("screendiv").id="screendiv-full"
     document.getElementById("screen-full").id="screen"
    }
 }
