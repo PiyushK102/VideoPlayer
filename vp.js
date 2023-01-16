@@ -34,7 +34,10 @@ function togglePlayPause(){
 }
 ////////////////////////////////////////////////////////////////
 ///////////////////////----Screen Modes----////////////////////////////
-
+fullscrbtn.addEventListener("click",fullscreen)
+function fullscreen(){
+    document.getElementById("#screen")=document.getElementById("#fullscreen")
+}
 //////////////////////////////////////////////////////////////////////
 ///////////////////////----Volume----////////////////////////////
 mute.addEventListener("click",toggleMute)
@@ -146,18 +149,3 @@ document.addEventListener("keydown", e =>{
 })
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-/* <script>
-        let condtion1,conditon2,e
-        function display(e) {
-            if (e==condtion1) {
-                document.getElementById("controlbuttonsP").style.display = "block";
-                document.getElementById("controlbuttonsS").style.display = "none";
-                } 
-            else {
-                document.getElementById("ControlbuttonsP").style.display = "none";
-                document.getElementById("controlbuttonsS").style.display = "block";
-            }
-        }
-    </script> */

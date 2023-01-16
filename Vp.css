@@ -17,6 +17,10 @@ body{
     border-radius: 10px;
     position: relative;
 }
+#screen-full,#screendiv-full{
+    width:95vw;
+    height:85vh;
+}
 #controls{
     display:flex;
     border-radius: 10px;
