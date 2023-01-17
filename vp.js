@@ -36,14 +36,14 @@ function togglePlayPause(){
 ///////////////////////----Screen Modes----////////////////////////////
 fullscrbtn.addEventListener("click",fullscreen)
 function fullscreen(){
-   if(fullscrbtn.addEventListener("click"==true)||video.addEventListener("dblclick")==true)
+   if(fullscrbtn.addEventListener("click")==true||video.addEventListener("dblclick")==true)
    {
     videocontainer.style.width="95vw"
     videocontainer.style.height="85vh"
     video.style.width="95vw"
-    video.style.height="85vh"
+    video.style.height="auto"
    }
-   else if(fullscrbtn.addEventListener("dblclick"==true))
+   else if(fullscrbtn.addEventListener("click")==true && videocontainer.style.width=="95vw")
    {
     videocontainer.style.width="80vw"
     videocontainer.style.height="40vw"
