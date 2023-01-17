@@ -64,7 +64,7 @@ body{
     align-items: center;
     align-content: center;
     float: right;
-    background-color:aqua;
+    background-color:rgb(255, 230, 0);
 }
 #progressBar{
     width:30vw;
@@ -83,7 +83,7 @@ body{
     display: none;
     width:100px;
     transition: width 150ms ease-in-out;
-    background-color: aqua;
+    background-color: rgb(253, 255, 255);
 }
 #volumectrl:hover #volslider,#volslider:focus-within{
     display:inline-block;
