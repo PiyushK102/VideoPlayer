@@ -42,12 +42,10 @@ body{
     background-color:rgba(255, 205, 113, 0.767);
     overflow:hidden;
     border-radius: 2px;
+    border:1px solid black;
+    position: absolute;
+}
 
-}
-#back:active,#play:active,#forward:active,#pause:active,#volvalue:active,#mute:active,#minip:active,#fullscr:active{
-    
-    background-color:rgba(163, 163, 255, 0.795);
-}
 #back,#play,#forward,#pause,#volvalue:hover,#mute:hover,#minip:hover,#fullscr:hover{
     border:1px solid red;
     background-color:rgba(12, 12, 255, 0.579);
