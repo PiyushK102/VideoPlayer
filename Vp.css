@@ -89,6 +89,10 @@ body{
     background-color: rgb(240, 255, 255);
 }
 @media screen and (max-width:770px){
+    *{
+        margin:0;
+        padding:0;
+    }
     body{
         align-items: center;
         align-content: center;
@@ -99,5 +103,8 @@ body{
     }
     #screendiv{
         height:70vh;
+    }
+    #screen{
+        height:auto;
     }
 }
