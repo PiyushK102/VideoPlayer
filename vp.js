@@ -46,6 +46,7 @@ function fullscreen(){
    }
   
 }
+mpbtn.addEventListener("click",pipmode)
 function pipmode()
 {
     if(mpbtn.requestPictureInPicture)
