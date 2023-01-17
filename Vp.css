@@ -32,8 +32,8 @@ body{
     transition: opacity 150ms ease-in-out;
 }
 #back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
-    width:40px;
-    height:30px;
+    width:2vw;
+    height:2vw;
     cursor: pointer;
     align-content:center;
     align-items:center;
