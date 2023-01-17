@@ -47,13 +47,16 @@ function fullscreen(){
   
 }
 mpbtn.addEventListener("click",pipmode)
-function pipmode()
-{
-    if(mpbtn.requestPictureInPicture)
-    {
+function pipmode() {
+    if (mpbtn.pictureInPictureElement) {
+          mpbtn.exitPictureInPicture();
+        }
+    else if (document.pictureInPictureEnabled) {
         video.requestPictureInPicture();
-    }
+        }
 }
+
+
 //////////////////////////////////////////////////////////////////////
 ///////////////////////----Volume----////////////////////////////
 mute.addEventListener("click",toggleMute)
