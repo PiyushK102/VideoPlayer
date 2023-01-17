@@ -32,14 +32,14 @@ body{
     transition: opacity 150ms ease-in-out;
 }
 #back,#play,#forward,#volumectrl,#pause,#volvalue,#mute,#minip,#fullscr{
-    width:40px;
+    width:30px;
     height:30px;
     cursor: pointer;
     align-content:center;
     align-items:center;
     text-align: center;
     vertical-align: middle;
-    background-color:rgba(255, 166, 0, 0.392);
+    background-color:rgba(255, 205, 113, 0.767);
     overflow:hidden;
     border-radius: 2px;
 
@@ -57,12 +57,14 @@ body{
     align-items: center;
     align-content:center;
     float: left;
+    background-color:azure;
 }
 #controlright{
     display:flex ;
     align-items: center;
     align-content: center;
     float: right;
+    background-color:aqua;
 }
 #progressBar{
     width:30vw;
