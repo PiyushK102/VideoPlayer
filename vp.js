@@ -4,7 +4,7 @@ const forward=document.querySelector("#forward")
 const back=document.querySelector("#back")
 const video= document.querySelector("#screen")
 const videocontainer=document.querySelector("screendiv")
-const mpbtn1=document.querySelector("#minip")
+const mpbtn=document.querySelector("#minip")
 const fullscrbtn=document.querySelector("#fullscr")
 const controls=document.querySelector("#controls")
 const volvalue=document.querySelector("#volvalue")
@@ -45,6 +45,13 @@ function fullscreen(){
         video.exitFullscreen();
    }
   
+}
+function pipmode()
+{
+    if(mpbtn.requestPictureInPicture)
+    {
+        video.requestPictureInPicture();
+    }
 }
 //////////////////////////////////////////////////////////////////////
 ///////////////////////----Volume----////////////////////////////
@@ -157,7 +164,7 @@ document.addEventListener("keydown", e =>{
             fullscreen()
             break
         case "o":
-            exitFullscreen()
+            pipmode()
             break
     }   
 })
