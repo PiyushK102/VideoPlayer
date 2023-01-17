@@ -52,6 +52,10 @@ body{
     border:1px solid red;
     background-color:rgba(12, 12, 255, 0.579);
 }
+#fullscr,#minip{
+    align-items: center;
+    align-content: flex-end;
+}
 #progressBar{
     width:30vw;
     cursor: pointer;
