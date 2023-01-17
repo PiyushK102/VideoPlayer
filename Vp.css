@@ -31,38 +31,37 @@ body{
     opacity: 1;
     transition: opacity 150ms ease-in-out;
 }
-#controls button{
+#back,#play,#forward,#volumectrl,#pause,#volvalue,#mute,#minip,#fullscr{
     width:40px;
     height:30px;
-    font-size: 1.1rem;
     cursor: pointer;
-    align-content:space-around;
+    align-content:center;
     align-items:center;
     text-align: center;
     vertical-align: middle;
     background-color:rgba(255, 166, 0, 0.392);
     overflow:hidden;
-    border-radius: 5px;
+    border-radius: 2px;
 
 }
-#controls button:active{
+#back:active,#play:active,#forward:active,#volumectrl:active,#pause:active,#volvalue:active,#mute:active,#minip:active,#fullscr:active{
     
     background-color:rgba(12, 12, 255, 0.579);
 }
-#controls button:hover{
+#back,#play,#forward,#volumectrl,#pause,#volvalue:hover,#mute:hover,#minip:hover,#fullscr:hover{
     border:1px solid red;
     background-color:rgba(12, 12, 255, 0.579);
 }
 #controlleft{
     display:flex ;
     align-items: center;
-    align-content: flex-end;
+    align-content:center;
     float: left;
 }
 #controlright{
     display:flex ;
     align-items: center;
-    align-content: flex-end;
+    align-content: center;
     float: right;
 }
 #progressBar{
