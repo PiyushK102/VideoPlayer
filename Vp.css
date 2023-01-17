@@ -43,6 +43,10 @@ body{
     height:30px;
     font-size: 1.1rem;
     cursor: pointer;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
     background-color:rgba(255, 166, 0, 0.392);
     overflow:hidden;
 }
