@@ -46,7 +46,7 @@ body{
 }
 #back:active,#play:active,#forward:active,#pause:active,#volvalue:active,#mute:active,#minip:active,#fullscr:active{
     
-    background-color:rgba(12, 12, 255, 0.579);
+    background-color:rgba(163, 163, 255, 0.795);
 }
 #back,#play,#forward,#pause,#volvalue:hover,#mute:hover,#minip:hover,#fullscr:hover{
     border:1px solid red;
