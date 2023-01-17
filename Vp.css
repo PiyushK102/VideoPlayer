@@ -54,11 +54,13 @@ body{
     background-color:rgba(12, 12, 255, 0.579);
 }
 #controlleft{
+    display:flex ;
     align-items: center;
     align-content: flex-end;
     float: left;
 }
 #controlright{
+    display:flex ;
     align-items: center;
     align-content: flex-end;
     float: right;
