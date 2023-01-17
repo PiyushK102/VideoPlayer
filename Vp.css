@@ -32,8 +32,8 @@ body{
     transition: opacity 150ms ease-in-out;
 }
 #back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
-    width:2vw;
-    height:2vw;
+    width:25px;
+    height:25px;
     cursor: pointer;
     align-content:center;
     align-items:center;
@@ -45,6 +45,7 @@ body{
     border:1px solid black;
     position: relative;
 }
+
 
 #back,#play,#forward,#pause,#volvalue:hover,#mute:hover,#minip:hover,#fullscr:hover{
     border:1px solid red;
@@ -61,8 +62,7 @@ body{
 #controlright{
     display:flex ;
     align-items: center;
-    align-content: center;
-    float: right;
+    align-content:space-between;
     background-color:rgb(255, 230, 0);
     border-radius: 10px;
 }
@@ -109,13 +109,16 @@ body{
         align-content: center;
         text-align: center;
     }
-    #screendiv,#screen{
-        width:100%;
+    #screen{
+        width:100vw;
         margin:0;
         padding:0;
     }
     #screendiv{
         height:70vh;
+        margin:0;
+        padding:0;
+        width: 100vw;
     }
     #screen{
         height:auto;
