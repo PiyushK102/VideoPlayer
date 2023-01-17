@@ -43,7 +43,7 @@ body{
     overflow:hidden;
     border-radius: 2px;
     border:1px solid black;
-    position: absolute;
+    position: relative;
 }
 
 #back,#play,#forward,#pause,#volvalue:hover,#mute:hover,#minip:hover,#fullscr:hover{
