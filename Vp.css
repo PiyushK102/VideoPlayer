@@ -107,6 +107,8 @@ body{
     }
     #screendiv,#screen{
         width:100%;
+        margin:0;
+        padding:0;
     }
     #screendiv{
         height:70vh;
