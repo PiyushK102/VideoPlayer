@@ -14,33 +14,37 @@
                     <!--////////////////////////////////////// Video Player Code//////////////////////////////////////////////////////// -->
 
                     <div id="screendiv" style="height: 40vw;width: 80vw;">
-                        <div id="screen">
-                            <video  data-volume-level="high" style="height: 40vw;width: 80vw;">
-                                <source src="https://drive.google.com/uc?id=17fX93QQMP7njPQOnDocSz2VIwqGGJq8P" type="video/mp4">
-                            </video>
-                        </div>
+                        
+                        <video id="screen" data-volume-level="high" style="height: 40vw;width: 80vw;">
+                            <source src="https://drive.google.com/uc?id=17fX93QQMP7njPQOnDocSz2VIwqGGJq8P" type="video/mp4">
+                        </video>
+                        
                         <div id="controls" style="height:fit-content;width: 80vw;">
-                            <div id="timer">
-                                <div class="currtime">0:00 </div>
-                                    /
-                                <div class="totaltime">00:00</div>
-                            </div>
+                            <div id="controlleft">
+                                <div id="timer">
+                                    <div class="currtime">0:00 </div>
+                                        /
+                                    <div class="totaltime">00:00</div>
+                                </div>
 
-                            <button id="back" title="Seek Backward">⏪</button>
-                            <button id="play" style="display:block;" title="Play">▶</button>
-                            <button id="pause" style="display:none;" title="Pause">⏸</button>
-                            <button id="forward" title="Seek Forward">⏩</button>
-                            <div id="volumectrl">
-                                <button id="volvalue" style="display:block" title="Click to Mute">
-                                    😁
-                                </button>
-                                <button id="mute" style="display:none" title="Click to Unmute">
-                                    🤐
-                                </button>
-                                <input type="range" min="0" max="100" id="volslider" title="Volume">
+                                <button id="back" title="Seek Backward">⏪</button>
+                                <button id="play" style="display:block;" title="Play">▶</button>
+                                <button id="pause" style="display:none;" title="Pause">⏸</button>
+                                <button id="forward" title="Seek Forward">⏩</button>
+                                <div id="volumectrl">
+                                    <button id="volvalue" style="display:block" title="Click to Mute">
+                                        😁
+                                    </button>
+                                    <button id="mute" style="display:none" title="Click to Unmute">
+                                        🤐
+                                    </button>
+                                    <input type="range" min="0" max="100" id="volslider" title="Volume">
+                                </div>
                             </div>
-                            <button id="minip" style="display:block;" title="Click to go in Picture in Picture Mode">◲</button>
-                            <button id="fullscr" style="display:block;"title="Click for Fullscreen Mode">↔</button>
+                            <div id="controlright">
+                                <button id="minip" style="display:block;" title="Click to go in Picture in Picture Mode">◲</button>
+                                <button id="fullscr" style="display:block;"title="Click for Fullscreen Mode">↔</button>
+                            </div>
                         </div>
                     </div>
 

@@ -53,7 +53,12 @@ body{
     border:1px solid red;
     background-color:rgba(12, 12, 255, 0.579);
 }
-#fullscr,#minip{
+#controlleft{
+    align-items: center;
+    align-content: flex-end;
+    float: left;
+}
+#controlright{
     align-items: center;
     align-content: flex-end;
     float: right;
