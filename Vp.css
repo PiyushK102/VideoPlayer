@@ -87,7 +87,8 @@ body{
 }
 #volumectrl:hover #volslider,#volslider:focus-within{
     display:inline-block;
-    width:100px
+    width:100px;
+    cursor:pointer;
 }
 #timer{
     display: flex;
