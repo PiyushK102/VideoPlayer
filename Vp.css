@@ -83,3 +83,16 @@ body{
     align-content: center;
     background-color: rgb(240, 255, 255);
 }
+@media screen and (max-width:770px){
+    body{
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+    #screendiv,#screen{
+        width:100%;
+    }
+    #screendiv{
+        height:70vh;
+    }
+}
