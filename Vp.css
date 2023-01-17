@@ -31,7 +31,7 @@ body{
     opacity: 1;
     transition: opacity 150ms ease-in-out;
 }
-#back,#play,#forward,#volumectrl,#pause,#volvalue,#mute,#minip,#fullscr{
+#back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
     width:30px;
     height:30px;
     cursor: pointer;
@@ -81,7 +81,7 @@ body{
 }
 #volslider{
     display: none;
-    width:00px;
+    width:100px;
     transition: width 150ms ease-in-out;
     background-color: aqua;
 }
@@ -95,6 +95,7 @@ body{
     margin-left: 5px;
     align-items: center;
     align-content: center;
+    border-radius: 5px;
     background-color: rgb(240, 255, 255);
 }
 @media screen and (max-width:770px){
