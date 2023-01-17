@@ -36,7 +36,7 @@ function togglePlayPause(){
 ///////////////////////----Screen Modes----////////////////////////////
 fullscrbtn.addEventListener("click",fullscreen)
 function fullscreen(){
-   if(fullscrbtn.addEventListener("click"==true))
+   if(fullscrbtn.addEventListener("click"==true)||video.addEventListener("dblclick")==true)
    {
     videocontainer.style.width="95vw"
     videocontainer.style.height="85vh"
