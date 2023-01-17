@@ -40,6 +40,10 @@ function fullscreen(){
    {
         video.requestFullscreen();
    }
+   else if(video.requestFullscreen==true)
+   {
+        video.exitFullscreen();
+   }
   
 }
 //////////////////////////////////////////////////////////////////////
@@ -149,6 +153,12 @@ document.addEventListener("keydown", e =>{
             case "l":
                 skip(+10)
                 break
+        case "f":
+            fullscreen()
+            break
+        case "o":
+            exitFullscreen()
+            break
     }   
 })
 
