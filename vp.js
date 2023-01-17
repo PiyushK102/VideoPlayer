@@ -42,6 +42,7 @@ function fullscreen(){
     videocontainer.style.height="85vh"
     video.style.width="95vw"
     video.style.height="auto"
+    fullscrbtn.style.backgroundcolor="orange"
    }
    else if(fullscrbtn.addEventListener("click")==true && videocontainer.style.width=="95vw")
    {
@@ -49,6 +50,7 @@ function fullscreen(){
     videocontainer.style.height="40vw"
     video.style.width="80vw"
     video.style.height="40vw"
+    fullscrbtn.style.backgroundcolor="white"
    }
 }
 //////////////////////////////////////////////////////////////////////
