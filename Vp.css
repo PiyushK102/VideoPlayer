@@ -2,15 +2,15 @@ body{
     background-color: grey;
 }
 #screendiv{
-    width:80vw;
-    height:40vw;
+    width:100%;
+    height:85%;
     margin:0.5%;
     border-radius: 10px;
     background-color: black;
 }
 #screen{
-    width:80vw;
-    height:40vw;
+    width:100%;
+    height:100%;
     border:3px solid rgb(255, 255, 255);
     border-radius: 10px;
     position: relative;
@@ -19,7 +19,7 @@ body{
 #controls{
     display:flex;
     border-radius: 10px;
-    width:fit-content;
+    width:100%;
     height:fit-content;
     background-color:transparent;
     border:3px solid black;
@@ -30,7 +30,7 @@ body{
     z-index: 2147483648;
     opacity: 1;
     transition: opacity 150ms ease-in-out;
-    margin-top: -10vw;
+    margin-top: -3vw;
 }
 #back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
     width:25px;
@@ -129,5 +129,8 @@ body{
     }
     #screen{
         height:auto;
+    }
+    #controls{
+        margin-top:-10vw;
     }
 }
