@@ -147,7 +147,7 @@ body{
         width:100px;
         transition: width 150ms ease-in-out;
         background-color: rgb(253, 255, 255);
-        orientation: portrait;
+        appearance: vertical;
     }
     #controlleft{
         width: 70%;
