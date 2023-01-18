@@ -1,5 +1,6 @@
 body{
     background-color: grey;
+    viewport-fit:auto;
 }
 #screendiv{
     width:98%;
@@ -121,6 +122,8 @@ body{
         align-items: center;
         align-content: center;
         text-align: center;
+        vertical-align: middle;
+        viewport-fit:auto;
     }
     #screen{
         width:100%;
