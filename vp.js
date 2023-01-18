@@ -12,12 +12,14 @@ const vol=document.querySelector("#volslider")
 const mute=document.querySelector("#mute")
 const currentTimeElement=document.querySelector(".currtime")
 const totalTimeElement=document.querySelector(".totaltime")
+const seekbar=document.querySelector("#seekbar")
 
 ///////////////////////////////////----Play Pause operation----////////////////////////////////////
 
 playbtn.addEventListener("click" , togglePlayPause)
 video.addEventListener("click",togglePlayPause) 
 pausebtn.addEventListener("click",togglePlayPause)
+controls.addEventListener("hover",display)
 
 function togglePlayPause(){
     if(video.paused==true)
@@ -25,12 +27,25 @@ function togglePlayPause(){
         video.play()
         pausebtn.style.display="block"
         playbtn.style.display="none"
+        
+        
     }
     else{
         video.pause()
         playbtn.style.display="block"
-        pausebtn.style.display="none" 
+        pausebtn.style.display="none"
+        
     }   
+}
+function display()
+{ 
+    if(controls.addEventListener("hover")==true || video.addEventListener("hover")==true)
+    {
+        controls.style.display="flex" 
+    }
+    else{
+        controls.style.display="none"
+    }
 }
 ////////////////////////////////////////////////////////////////
 ///////////////////////----Screen Modes----////////////////////////////
@@ -61,7 +76,7 @@ function pipmode() {
 ///////////////////////----Volume----////////////////////////////
 mute.addEventListener("click",toggleMute)
 volvalue.addEventListener("click",toggleMute)
-vol.addEventListener("input",e=>{
+vol.addEventListener("input",e =>{
     video.volume=e.target.value
     video.muted=e.target.value===0
 })
@@ -79,16 +94,16 @@ function toggleMute()
    }
 }
 video.addEventListener("volumechange",()=>{
-    volslider.value=video.volume
+    vol.value=video.volume
     let volumelevel
     if(video.muted || video.volume===0)
     {
-        volslider.value=0
+        vol.value=0
         volumelevel="muted"
         mute.style.display="block"
         volvalue.style.display="none"
     }
-    else if(video.volume>=.5){
+    else if(video.volume>=0.5){
         volumelevel="high"
         mute.style.display="none"
         volvalue.style.display="block"
@@ -98,8 +113,7 @@ video.addEventListener("volumechange",()=>{
         mute.style.display="none"
         volvalue.style.display="block"
     }
-    video.volume
-    video.muted
+    videocontainer.dataset.volumelevel=volumelevel
 })
 /////////////////////////////////////////////////////////////////
 /////////////////--------Duration-----------////////////////////
@@ -150,6 +164,7 @@ document.addEventListener("keydown", e =>{
     switch(e.key.toLowerCase()){
         case " ":
         case "p":
+        case "f10":
             togglePlayPause()
             break
         case "m":
