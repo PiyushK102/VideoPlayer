@@ -97,6 +97,7 @@ body{
     width:100px;
     transition: width 150ms ease-in-out;
     background-color: rgb(253, 255, 255);
+    z-index: 2147483648;
 }
 #volumectrl:hover #volslider,#volslider:focus-within{
     display:inline-block;
@@ -147,7 +148,7 @@ body{
         width:100px;
         transition: width 150ms ease-in-out;
         background-color: rgb(253, 255, 255);
-        appearance: vertical;
+        appearance: vertical-slider;
     }
     #controlleft{
         width: 70%;
