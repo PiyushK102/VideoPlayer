@@ -2,10 +2,9 @@ body{
     background-color: grey;
 }
 #screendiv{
-    width:100%;
+    width:98%;
     height:85%;
-    margin:0.5%;
-    border-radius: 10px;
+    margin:1%;
     background-color: black;
 }
 #screen{
@@ -30,7 +29,8 @@ body{
     z-index: 2147483648;
     opacity: 1;
     transition: opacity 150ms ease-in-out;
-    margin-top: -3vw;
+    margin-top: -1vw;
+    padding:5px;
 }
 #back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
     width:25px;
