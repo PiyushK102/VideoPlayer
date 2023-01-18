@@ -19,7 +19,7 @@ body{
 #controls{
     display:flex;
     border-radius: 10px;
-    width:75vw;
+    width:fit-content;
     height:fit-content;
     background-color:transparent;
     border:3px solid black;
