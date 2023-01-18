@@ -48,8 +48,12 @@ body{
 }
 
 
-#back,#play,#forward,#pause,#volvalue:hover,#mute:hover,#minip:hover,#fullscr:hover{
-    border:1px solid red;
+#back:hover,#play:hover,#forward:hover,#pause:hover,#volvalue:hover,#mute:hover,#minip:hover,#fullscr:hover{
+    border:1px solid rgb(0, 0, 0);
+    background-color:rgba(12, 12, 255, 0.579);
+}
+#back:active,#play:active,#forward:active,#pause:active,#volvalue:active,#mute:active,#minip:active,#fullscr:active{
+    border:1px solid rgb(255, 0, 0);
     background-color:rgba(12, 12, 255, 0.579);
 }
 #controlleft{
