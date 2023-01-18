@@ -139,4 +139,11 @@ body{
     #controls{
         margin-top:-10vw;
     }
+    #volslider{
+        display: none;
+        width:100px;
+        transition: width 150ms ease-in-out;
+        background-color: rgb(253, 255, 255);
+        orientation: portrait;
+    }
 }
