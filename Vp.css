@@ -18,7 +18,7 @@ body{
 #controls{
     display:flex;
     border-radius: 10px;
-    width:100%;
+    width:98%;
     height:fit-content;
     background-color:rgba(240, 255, 255, 0.527);
     border:1px solid black;
@@ -29,7 +29,7 @@ body{
     z-index: 2147483648;
     opacity: 1;
     transition: opacity 150ms ease-in-out;
-    margin-top: -1vw;
+    margin-top: -3vw;
     padding:5px;
 }
 #back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
@@ -66,6 +66,7 @@ body{
     border-radius: 10px;
     margin:5px;
     padding:2px;
+    width: 50%;
 }
 #controlright{
     display:flex ;
@@ -75,6 +76,7 @@ body{
     border-radius: 10px;
     margin:5px;
     padding:2px;
+    width: 50%;
 }
 #progressBar{
     width:30vw;
