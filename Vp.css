@@ -21,7 +21,7 @@ body{
     border-radius: 10px;
     width:75vw;
     height:fit-content;
-    background-color: rgb(255, 255, 255);
+    background-color:transparent;
     border:3px solid black;
     align-content: center;
     align-items: center;
@@ -30,6 +30,7 @@ body{
     z-index: 2147483648;
     opacity: 1;
     transition: opacity 150ms ease-in-out;
+    margin-top: 10vw;
 }
 #back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
     width:25px;
