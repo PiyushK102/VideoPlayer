@@ -163,17 +163,19 @@ body{
         transition: width 150ms ease-in-out;
         background-color: rgb(253, 255, 255);
         appearance: slider-vertical;
-        position: sticky;
+        position: static;
         top:5px;
     }
     #back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
         width:20px;
-        height:20px;
+        height:100%;
         padding:1px;
         margin: 0 2px 0 2px;
         background-color:transparent;
         border: none;
         align-self: center;
+        text-align: center;
+        vertical-align: middle;
     }
   
 }
