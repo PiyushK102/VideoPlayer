@@ -25,6 +25,7 @@ body{
     display:none;
     width:98%;
     height:fit-content;
+    float: bottom;
     background-color:rgba(235, 255, 255, 0.803);
     align-content: center;
     align-items: center;
