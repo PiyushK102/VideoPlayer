@@ -161,6 +161,7 @@ body{
 
         align-self: flex-end;
         height:35px;
+        justify-items: center;
     }
     #volslider{
         display: none;
@@ -176,6 +177,7 @@ body{
         margin: 0 2px 0 2px;
         background-color:transparent;
         border: none;
+        align-self: center;
     }
   
 }
