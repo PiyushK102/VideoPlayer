@@ -158,10 +158,9 @@ body{
         padding:0;
     }
     #controls{
-        position: sticky;
-        bottom: 0;
-        float: inline-end;
 
+        align-self: flex-end;
+        height:35px;
     }
     #volslider{
         display: none;
@@ -169,6 +168,12 @@ body{
         transition: width 150ms ease-in-out;
         background-color: rgb(253, 255, 255);
         appearance: slider-vertical;
+    }
+    #back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
+        width:20px;
+        height:20px;
+        padding:1px;
+        margin: 0 2px 0 2px;
     }
   
 }
