@@ -16,7 +16,7 @@ body{
 }
 #screen{
     width:100%;
-    height:90%;
+    height:85%;
     border-radius: 10px;
     position: relative;
     margin: 1%;
@@ -26,7 +26,7 @@ body{
 #controls{
     display:none;
     width:98%;
-    height:10%;
+    height:15%;
     background-color:rgba(235, 255, 255, 0.803);
     align-content: center;
     align-items: center;
@@ -66,11 +66,6 @@ body{
 #back:active,#play:active,#forward:active,#pause:active,#volvalue:active,#mute:active,#minip:active,#fullscr:active{
     border:1px solid rgb(255, 0, 0);
     background-color:rgba(12, 12, 255, 0.579);
-}
-
-#controls img{
-    width:1.2vw;
-    height:1.2vw;
 }
 #volumectrl{
     display:flex;
