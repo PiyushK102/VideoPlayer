@@ -16,7 +16,7 @@ body{
 }
 #screen{
     width:100%;
-    height:70vh;
+    height:90%;
     border-radius: 10px;
     position: relative;
     margin: 1%;
@@ -26,7 +26,7 @@ body{
 #controls{
     display:none;
     width:98%;
-    height:fit-content;
+    height:10%;
     background-color:rgba(235, 255, 255, 0.803);
     align-content: center;
     align-items: center;
