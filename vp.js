@@ -168,6 +168,7 @@ document.addEventListener("keydown", e =>{
             togglePlayPause()
             break
         case "m":
+        case "32":
             toggleMute()
             break 
         case "arrowleft":
