@@ -177,6 +177,7 @@ body{
         border: none;
         align-self: center;
         justify-items: center;
+        align-items: center;
         text-align: center;
         vertical-align: middle;
     }
