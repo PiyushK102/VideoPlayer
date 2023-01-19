@@ -160,6 +160,7 @@ body{
     #controls{
         position: sticky;
         bottom: 0;
+        float: inline-end;
 
     }
     #volslider{
