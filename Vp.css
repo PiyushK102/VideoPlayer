@@ -104,23 +104,7 @@ body{
     cursor:pointer;
 
 }
-#volslider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #04AA6D; /* Green background */
-    cursor: pointer; /* Cursor on hover */
-  }
-  
-#volslider::-moz-range-thumb {
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #07ffa4; /* Green background */
-    cursor: pointer; /* Cursor on hover */
-  }
-
-  
+ 
 #seekbar::-moz-progress-bar {
     background-color: #0095dd;
   }
