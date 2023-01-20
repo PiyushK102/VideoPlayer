@@ -6,7 +6,7 @@ const video= document.querySelector("#screen");
 const videocontainer=document.querySelector("screendiv");
 const mpbtn=document.querySelector("#minip");
 const fullscrbtn=document.querySelector("#fullscr");
-const controls=document.querySelector("#controls");
+const controls=document.querySelector("#controlscontainer");
 const volvalue=document.querySelector("#voln");
 const vol=document.querySelector("#volslider");
 const volval=document.querySelector("#volval")
@@ -28,8 +28,6 @@ function togglePlayPause(){
         video.play()
         pausebtn.style.display="block"
         playbtn.style.display="none"
-        
-        
     }
     else{
         video.pause()
@@ -38,9 +36,10 @@ function togglePlayPause(){
         
     }   
 }
+
 function display()
 { 
-    if(controls.addEventListener("hover")==true || video.addEventListener("hover")==true || video.paused==true)
+    if(controls.addEventListener("hover")==true || video.addEventListener("hover")==true || video.addEventListener("pause")==true)
     {
         controls.style.display="flex" 
     }
@@ -98,10 +97,14 @@ function toggleMute()
    {
         mute.style.display="block"
         volvalue.style.display="none"
+        volval.innerHTML="Muted"
+        vol.value="0"
    }
    else{
         mute.style.display="none"
         volvalue.style.display="block"
+        volval.innerHTML=Math.ceil((video.volume)*100)
+        vol.value=Math.ceil((video.volume)*100)
    }
 }
 
