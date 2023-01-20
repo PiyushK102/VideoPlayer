@@ -1,18 +1,18 @@
-const playbtn=document.querySelector("#play")
-const pausebtn=document.querySelector("#pause")
-const forward=document.querySelector("#forward")
-const back=document.querySelector("#back")
-const video= document.querySelector("#screen")
-const videocontainer=document.querySelector("screendiv")
-const mpbtn=document.querySelector("#minip")
-const fullscrbtn=document.querySelector("#fullscr")
-const controls=document.querySelector("#controls")
-const volvalue=document.querySelector("#volvalue")
-const vol=document.querySelector("#volslider")
-const mute=document.querySelector("#mute")
-const currentTimeElement=document.querySelector(".currtime")
-const totalTimeElement=document.querySelector(".totaltime")
-const seekbar=document.querySelector("#seekbar")
+const playbtn=document.querySelector("#play");
+const pausebtn=document.querySelector("#pause");
+const forward=document.querySelector("#forward");
+const back=document.querySelector("#back");
+const video= document.querySelector("#screen");
+const videocontainer=document.querySelector("screendiv");
+const mpbtn=document.querySelector("#minip");
+const fullscrbtn=document.querySelector("#fullscr");
+const controls=document.querySelector("#controls");
+const volvalue=document.querySelector("#volvalue");
+const vol=document.querySelector("#volslider");
+const mute=document.querySelector("#mute");
+const currentTimeElement=document.querySelector(".currtime");
+const totalTimeElement=document.querySelector(".totaltime");
+const seekbar=document.querySelector("#seekbar");
 
 ///////////////////////////////////----Play Pause operation----////////////////////////////////////
 
