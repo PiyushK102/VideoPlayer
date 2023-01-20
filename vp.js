@@ -80,7 +80,7 @@ volvalue.addEventListener("click",toggleMute)
 vol.addEventListener("input",e =>{
     video.volume=(e.target.value)/100
     video.muted=e.target.value===0
-    volval.innerHTML=ceil((video.volume)*100)
+    volval.innerHTML=Math.ceil((video.volume)*100)
     if(vol.value==0){
         mute.style.display="block"
         volvalue.style.display="none"
