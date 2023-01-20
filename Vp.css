@@ -6,7 +6,7 @@ body{
     background-color: grey;
     
 }
-#screendiv[data-volume-level="high"]{
+#screendiv{
     width:80%;
     height:80vh;
     background-color: rgb(0, 0, 0);
