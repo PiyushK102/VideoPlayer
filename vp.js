@@ -106,6 +106,7 @@ video.addEventListener("volumechange",()=>{
       
         mute.style.display="none"
         volvalue.style.display="block"
+        video.volume=vol.value
     }
 })
 /////////////////////////////////////////////////////////////////
