@@ -80,6 +80,7 @@ volvalue.addEventListener("click",toggleMute)
 vol.addEventListener("input",e =>{
     video.volume=(e.target.value)/100
     video.muted=e.target.value===0
+    volval.innerHTML=(video.volume)*100
 })
 function toggleMute()
 {
@@ -94,16 +95,7 @@ function toggleMute()
         volvalue.style.display="block"
    }
 }
-function vidvolume(){
-    if(vol.value!=0){
-        video.volume=(vol.value)/100;
-        volval=vol.value;
-    }
-    else{
 
-    }
-
-}
 
 /////////////////////////////////////////////////////////////////
 /////////////////--------Duration-----------////////////////////
