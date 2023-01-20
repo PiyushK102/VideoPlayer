@@ -94,7 +94,16 @@ function toggleMute()
         volvalue.style.display="block"
    }
 }
-function()
+function vidvolume(){
+    if(vol.value!=0){
+        video.volume=(vol.value)/100;
+        volval=vol.value;
+    }
+    else{
+        
+    }
+
+}
 
 /////////////////////////////////////////////////////////////////
 /////////////////--------Duration-----------////////////////////
