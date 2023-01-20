@@ -99,21 +99,14 @@ video.addEventListener("volumechange",()=>{
     if(video.muted || video.volume===0)
     {
         vol.value=0
-        volumelevel="muted"
         mute.style.display="block"
         volvalue.style.display="none"
     }
-    else if(video.volume>=0.5){
-        volumelevel="high"
-        mute.style.display="none"
-        volvalue.style.display="block"
-    }
     else{
-        volumelevel="low"
+      
         mute.style.display="none"
         volvalue.style.display="block"
     }
-    video.dataset.volumelevel=volumelevel
 })
 /////////////////////////////////////////////////////////////////
 /////////////////--------Duration-----------////////////////////
