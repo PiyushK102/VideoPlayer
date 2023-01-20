@@ -15,21 +15,24 @@
 
                     <div id="screendiv">
                         
-                        <video id="screen" data-volume-level="high">
+                        <video id="screen">
                             <source src="https://drive.google.com/uc?id=17fX93QQMP7njPQOnDocSz2VIwqGGJq8P" type="video/mp4">
                             
                         </video>
-                        <div id="controls">
-                                <div id="back" title="Seek Backward">⏪</div>
-                                <div id="play" style="display:block;" title="Play"><strong>▶</strong></div>
-                                <div id="pause" style="display:none;" title="Pause">⏸</div>
-                                <div id="forward" title="Seek Forward">⏩</div>
+                        <div id="controlscontainer">
+                            <div id="progress">
+                                <progress id="seekbar" min="0"></progress>
+                            </div>
+                            <div id="controls">
                                 <div id="timer">
                                     <div class="currtime">00:00</div>
                                         /
                                     <div class="totaltime">00:00</div>
                                 </div>
-                                <progress id="seekbar" min="0"><span id="progress"></span></progress>
+                                <div id="back" title="Seek Backward">⏪</div>
+                                <div id="play" style="display:block;" title="Play"><strong>▶</strong></div>
+                                <div id="pause" style="display:none;" title="Pause">⏸</div>
+                                <div id="forward" title="Seek Forward">⏩</div>    
                                 <div id="minip" style="display:block;" title="Click to go in Picture in Picture Mode"> <strong>◲</strong></div>
                                 <div id="fullscr" style="display:block;"title="Click for Fullscreen Mode"><strong>↔</strong></div>
                                 <div id="volumectrl">
@@ -42,7 +45,7 @@
                                     <input type="range" min="0" max="100" steps="any" value="100" id="volslider" title="Volume">
                                     <div id="volval">100</div>
                                 </div>
-                            
+                            </div>
                         </div>
                     </div>
 
