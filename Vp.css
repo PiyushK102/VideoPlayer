@@ -168,6 +168,7 @@ body{
         appearance: slider-vertical;
         position:relative;
         top:5px;
+        transform: scaleY(1);
         
     }
     #back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
