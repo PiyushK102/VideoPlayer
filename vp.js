@@ -93,22 +93,7 @@ function toggleMute()
         volvalue.style.display="block"
    }
 }
-video.addEventListener("volumechange",()=>{
-    vol.value=video.volume
-    let volumelevel
-    if(video.muted || video.volume===0)
-    {
-        vol.value=0
-        mute.style.display="block"
-        volvalue.style.display="none"
-    }
-    else{
-      
-        mute.style.display="none"
-        volvalue.style.display="block"
-        video.volume=vol.value
-    }
-})
+
 /////////////////////////////////////////////////////////////////
 /////////////////--------Duration-----------////////////////////
 video.addEventListener("loadeddata",()=>{
