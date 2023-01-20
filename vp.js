@@ -113,7 +113,7 @@ video.addEventListener("volumechange",()=>{
         mute.style.display="none"
         volvalue.style.display="block"
     }
-    videocontainer.dataset.volumelevel=volumelevel
+    video.dataset.volumelevel=volumelevel
 })
 /////////////////////////////////////////////////////////////////
 /////////////////--------Duration-----------////////////////////
