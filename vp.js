@@ -78,7 +78,7 @@ function pipmode() {
 mute.addEventListener("click",toggleMute)
 volvalue.addEventListener("click",toggleMute)
 vol.addEventListener("input",e =>{
-    video.volume=e.target.value
+    video.volume=(e.target.value)/100
     video.muted=e.target.value===0
 })
 function toggleMute()
@@ -100,7 +100,7 @@ function vidvolume(){
         volval=vol.value;
     }
     else{
-        
+
     }
 
 }
