@@ -7,8 +7,9 @@ const videocontainer=document.querySelector("screendiv");
 const mpbtn=document.querySelector("#minip");
 const fullscrbtn=document.querySelector("#fullscr");
 const controls=document.querySelector("#controls");
-const volvalue=document.querySelector("#volvalue");
+const volvalue=document.querySelector("#voln");
 const vol=document.querySelector("#volslider");
+const volval=document.querySelector("#volval")
 const mute=document.querySelector("#mute");
 const currentTimeElement=document.querySelector(".currtime");
 const totalTimeElement=document.querySelector(".totaltime");
@@ -93,6 +94,7 @@ function toggleMute()
         volvalue.style.display="block"
    }
 }
+function()
 
 /////////////////////////////////////////////////////////////////
 /////////////////--------Duration-----------////////////////////

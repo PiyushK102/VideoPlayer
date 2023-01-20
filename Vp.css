@@ -80,6 +80,10 @@ body{
     z-index: 2;
     
 }
+#volval{
+    font-size:"12px";
+    color: black;
+}
 #volumectrl:hover #volslider,#volslider:focus-within{
     display:block;
     width:100px;
@@ -185,6 +189,10 @@ body{
         align-items: center;
         text-align: center;
         vertical-align: middle;
+    }
+    #volval{
+        font-size: 7;
+        color: black;
     }
   
 }
