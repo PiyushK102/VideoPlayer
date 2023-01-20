@@ -6,7 +6,7 @@ body{
     background-color: grey;
     
 }
-#screendiv{
+#screendiv[data-volume-level="high"]{
     width:80%;
     height:80vh;
     background-color: rgb(0, 0, 0);
@@ -84,7 +84,7 @@ body{
     display:block;
     width:100px;
     cursor:pointer;
-    transform: scaleX(1);
+
 }
 #volslider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
@@ -101,6 +101,8 @@ body{
     background: #07ffa4; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
+
+  
 #seekbar::-moz-progress-bar {
     background-color: #0095dd;
   }
