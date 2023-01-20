@@ -85,7 +85,7 @@ vol.addEventListener("input",e =>{
 function toggleMute()
 {
    video.muted=!video.muted
-   if(video.muted==true)
+   if(video.muted==true || video.volume==0)
    {
         mute.style.display="block"
         volvalue.style.display="none"
