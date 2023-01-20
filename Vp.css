@@ -167,6 +167,7 @@ body{
         appearance: slider-vertical;
         position:relative;
         top:5px;
+        transform: scaleX(1);
     }
     #back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
         width:20px;
