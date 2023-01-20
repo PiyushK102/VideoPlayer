@@ -84,6 +84,7 @@ body{
     display:block;
     width:100px;
     cursor:pointer;
+    transform: scaleX(1);
 }
 #volslider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
@@ -167,7 +168,7 @@ body{
         appearance: slider-vertical;
         position:relative;
         top:5px;
-        transform: scaleX(1);
+        
     }
     #back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
         width:20px;
