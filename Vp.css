@@ -168,13 +168,14 @@ body{
     }
     #volslider{
         display: none;
-        width:100px;
+        width:30px;
+        height:auto;
         transition: width 150ms ease-in-out;
         background-color: rgb(253, 255, 255);
         appearance: slider-vertical;
         position:relative;
         top:5px;
-        transform: scaleY(1);
+        
         
     }
     #back,#play,#forward,#pause,#voln,#mute,#minip,#fullscr{
