@@ -136,6 +136,9 @@ body{
     border-radius: 10px;
     z-index: 2147483648;
 }
+#video:fullscreen{
+    z-index: 3;
+}
 @media screen and (max-width:770px){
     *{
         margin:0;
@@ -195,5 +198,7 @@ body{
         font-size: 7;
         color: black;
     }
-  
+    #video:fullscreen{
+        z-index: 3;
+    }
 }
