@@ -51,8 +51,9 @@ function display()
 ////////////////////////////////////////////////////////////////
 ///////////////////////----Screen Modes----////////////////////////////
 fullscrbtn.addEventListener("click",fullscreen)
+video.addEventListener("dblclick",fullscreen)
 function fullscreen(){
-   if(fullscrbtn.requestFullscreen ||video.addEventListener("dblclick")==true)
+   if(fullscrbtn.requestFullscreen ||video.requestFullscreen)
    {
         video.requestFullscreen();
    }
