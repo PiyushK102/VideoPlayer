@@ -39,7 +39,7 @@ function togglePlayPause(){
 }
 function display()
 { 
-    if(controls.addEventListener("hover")==true || video.addEventListener("hover")==true)
+    if(controls.addEventListener("hover")==true || video.addEventListener("hover")==true || video.paused==true)
     {
         controls.style.display="flex" 
     }
