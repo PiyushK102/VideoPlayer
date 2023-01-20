@@ -40,7 +40,7 @@ body{
     display:flex;
     
 }
-#back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
+#back,#play,#forward,#pause,#voln,#mute,#minip,#fullscr{
     width:25px;
     height:25px;
     cursor: pointer;
@@ -58,11 +58,11 @@ body{
 }
 
 
-#back:hover,#play:hover,#forward:hover,#pause:hover,#volvalue:hover,#mute:hover,#minip:hover,#fullscr:hover{
+#back:hover,#play:hover,#forward:hover,#pause:hover,#voln:hover,#mute:hover,#minip:hover,#fullscr:hover{
     border:1px solid rgb(0, 0, 0);
     background-color:rgba(12, 12, 255, 0.579);
 }
-#back:active,#play:active,#forward:active,#pause:active,#volvalue:active,#mute:active,#minip:active,#fullscr:active{
+#back:active,#play:active,#forward:active,#pause:active,#voln:active,#mute:active,#minip:active,#fullscr:active{
     border:1px solid rgb(255, 0, 0);
     background-color:rgba(12, 12, 255, 0.579);
 }
@@ -177,7 +177,7 @@ body{
         transform: scaleY(1);
         
     }
-    #back,#play,#forward,#pause,#volvalue,#mute,#minip,#fullscr{
+    #back,#play,#forward,#pause,#voln,#mute,#minip,#fullscr{
         width:20px;
         height:100%;
         padding:1px;
