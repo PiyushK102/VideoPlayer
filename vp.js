@@ -13,7 +13,8 @@ const volval=document.querySelector("#volval")
 const mute=document.querySelector("#mute");
 const currentTimeElement=document.querySelector(".currtime");
 const totalTimeElement=document.querySelector(".totaltime");
-const seekbar=document.querySelector("#seekbar");
+const seekbar=document.querySelector("#progress");
+
 
 ///////////////////////////////////----Play Pause operation----////////////////////////////////////
 
@@ -65,10 +66,10 @@ function fullscreen(){
 mpbtn.addEventListener("click",pipmode)
 function pipmode() {
     if (mpbtn.pictureInPictureElement) {
-          mpbtn.exitPictureInPicture();
+            mpbtn.exitPictureInPicture();
         }
     else if (document.pictureInPictureEnabled) {
-        video.requestPictureInPicture();
+            video.requestPictureInPicture();
         }
 }
 
@@ -80,14 +81,17 @@ volvalue.addEventListener("click",toggleMute)
 vol.addEventListener("input",e =>{
     video.volume=(e.target.value)/100
     video.muted=e.target.value===0
-    volval.innerHTML=Math.ceil((video.volume)*100)
+    volval.innerHTML=Math.floor((video.volume)*100)
     if(vol.value==0){
         mute.style.display="block"
         volvalue.style.display="none"
+        volval.innerHTML="Muted"
+
     }
     else{
         mute.style.display="none"
         volvalue.style.display="block"
+        volval.innerHTML=Math.floor((video.volume)*100);
    }
 })
 function toggleMute()
@@ -97,25 +101,28 @@ function toggleMute()
    {
         mute.style.display="block"
         volvalue.style.display="none"
-        volval.innerHTML="Muted"
         vol.value="0"
+        volval.innerHTML="Muted"
    }
    else{
         mute.style.display="none"
         volvalue.style.display="block"
         volval.innerHTML=Math.ceil((video.volume)*100)
-        vol.value=Math.ceil((video.volume)*100)
+        vol.value=Math.floor((video.volume)*100)
    }
 }
 
 
 /////////////////////////////////////////////////////////////////
 /////////////////--------Duration-----------////////////////////
+
 video.addEventListener("loadeddata",()=>{
     totalTimeElement.textContent=formatDuration(video.duration)
+    
 })
 video.addEventListener("timeupdate",()=>{
     currentTimeElement.textContent=formatDuration(video.currentTime)
+    
 })
 const leadingZeroFormatter=new Intl.NumberFormat(undefined,{
     minimumIntegerDigits:2
@@ -127,13 +134,14 @@ function formatDuration(time){
     if(hr===0)
     {
         return`${min}:${leadingZeroFormatter.format(sec)}`
+        
     }
     else{
         return `${hr}:${leadingZeroFormatter.format(min)
         }:${leadingZeroFormatter.format(sec)}`
     }
-   
 }
+
 function skip(duration){
     
     video.currentTime+=duration
@@ -151,7 +159,21 @@ function skipb(duration)
     video.currentTime-=duration
 }
 back.addEventListener("click",skipb)
-////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+
+/////////////////--------ProgressBar-----------////////////////////
+var progresspercent=(video.currentTime/video.duration)
+
+progress.addEventListener("mousemove",progressHap)
+function progressHap()
+{
+
+}
+
+// seekbar.setAttribute("value")=(video.currentTime/video.duration)
+// seekbar.setAttribute("max")=video.duration
+///////////////////////////////////////////////////////////////////
+
 
 
 document.addEventListener("keydown", e =>{
