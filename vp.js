@@ -81,7 +81,7 @@ volvalue.addEventListener("click",toggleMute)
 vol.addEventListener("input",e =>{
     video.volume=(e.target.value)/100
     video.muted=e.target.value===0
-    volval.innerHTML=Math.floor((video.volume)*100)
+    volval.innerHTML=Math.round((video.volume)*100)
     if(vol.value==0){
         mute.style.display="block"
         volvalue.style.display="none"
@@ -91,7 +91,7 @@ vol.addEventListener("input",e =>{
     else{
         mute.style.display="none"
         volvalue.style.display="block"
-        volval.innerHTML=Math.floor((video.volume)*100);
+        volval.innerHTML=Math.round((video.volume)*100);
    }
 })
 function toggleMute()
@@ -114,6 +114,20 @@ function toggleMute()
 
 
 /////////////////////////////////////////////////////////////////
+/////////////////--------ProgressBar-----------////////////////////
+
+video.addEventListener("loadeddata",()=>{
+    seekbar.setAttribute("max",(video.duration));
+})
+video.addEventListener("timeupdate",()=>{
+    seekbar.value=(video.currentTime)
+})
+    
+seekbar.addEventListener("input",e => {
+    video.currentTime=(e.target.value);
+    
+})
+///////////////////////////////////////////////////////////////////
 /////////////////--------Duration-----------////////////////////
 
 video.addEventListener("loadeddata",()=>{
@@ -160,22 +174,6 @@ function skipb(duration)
 }
 back.addEventListener("click",skipb)
 ///////////////////////////////////////////////////////////////////
-
-/////////////////--------ProgressBar-----------////////////////////
-var progresspercent=(video.currentTime/video.duration)
-
-progress.addEventListener("mousemove",progressHap)
-function progressHap()
-{
-
-}
-
-// seekbar.setAttribute("value")=(video.currentTime/video.duration)
-// seekbar.setAttribute("max")=video.duration
-///////////////////////////////////////////////////////////////////
-
-
-
 document.addEventListener("keydown", e =>{
     switch(e.key.toLowerCase()){
         case " ":
