@@ -115,7 +115,6 @@ body{
     width:100%;
     height: 3px;
     margin:10px;
-    -webkit-appearance: none;
     background-color: rgb(33, 255, 140);
 }
 ::-webkit-slider-thumb{
