@@ -238,7 +238,7 @@ body{
         height:5px;
     }
 }
-@media screen and (max-height:400px){
+@media screen and (max-height:572px){
     *{
         margin:0;
         padding:0;
