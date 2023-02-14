@@ -238,3 +238,22 @@ body{
         height:5px;
     }
 }
+@media screen and (max-height:400px){
+    *{
+        margin:0;
+        padding:0;
+    }
+    #screendiv{
+        width: 100%;
+        margin:0;
+        height:80vh;
+        padding: 0;
+    }
+    #screen{
+        justify-self: center;
+        width:70%;
+        height:65vh;
+        margin:0;
+        padding:0;
+    }
+}
