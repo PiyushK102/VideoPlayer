@@ -40,7 +40,7 @@ function togglePlayPause(){
 
 function display()
 { 
-    if(controls.addEventListener("hover")==true || video.addEventListener("hover")==true || video.addEventListener("pause")==true)
+    if(controls.addEventListener("hover")==true | video.addEventListener("hover")==true | video.pause==true)
     {
         controls.style.display="flex" 
     }
@@ -121,6 +121,10 @@ video.addEventListener("loadeddata",()=>{
 })
 video.addEventListener("timeupdate",()=>{
     seekbar.value=(video.currentTime)
+    if(video.currentTime==video.duration)
+    {
+        togglePlayPause()
+    }
 })
     
 seekbar.addEventListener("input",e => {
