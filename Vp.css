@@ -29,11 +29,14 @@ body{
     border-radius: 10px;
     position: relative;
     margin: 0 0 0 1%;
-    position: sticky;
+    position:sticky;
     top:0;
+    align-self:center;
     justify-self:center;
     align-items:center;
     align-content:center;
+    text-align:center;
+    vertical-align:middle;
 }
 #controlscontainer{ 
     display: none;
