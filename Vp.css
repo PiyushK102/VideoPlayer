@@ -180,6 +180,9 @@ body{
     padding:3px 5px 3px 5px;
     
 }
+#timer:hover{
+    background-color:rgba(129, 225, 255, 0.755);
+}
 #video:fullscreen{
     z-index: 3;
 }
@@ -292,8 +295,7 @@ body{
     }
     #volval{
         font-size: 7;
-        color: rgb(255, 255, 255);
-        
+        color: rgb(0,0,0);
     }
     #video:fullscreen{
         z-index: 3;
