@@ -11,41 +11,45 @@
     <title>Video Player</title>
 </head>
 <body>
-    <!--////////////////////////////////////// Video Player Code//////////////////////////////////////////////////////// -->
-        <div id="screendiv">
+                    <!--////////////////////////////////////// Video Player Code//////////////////////////////////////////////////////// -->
+
+                    <div id="screendiv">
                         <!-- https://drive.google.com/uc?id=1QAkCKZUvfy12yubtrx40oQKccVCICEAN -->
 			<div id="divscreen">
-                <video id="screen">
-                    <source src="https://drive.google.com/uc?id=18u2LAx40rUVEBUuUGUJAf6fN_ZT3YTbR" type="video/mp4">
-                </video>
+                        	<video id="screen">
+                            		<source src="https://drive.google.com/uc?id=18u2LAx40rUVEBUuUGUJAf6fN_ZT3YTbR" type="video/mp4">
+                        	</video>
 			</div>
-            <div id="controlscontainer">
-                <input id="progress" min="0" max="100" title="Seek" type="range" steps="any" value="0">
-                <div id="controls">
-                    <div id="timer">
-                        <div class="currtime">0:00</div>
-                            /
-                        <div class="totaltime">00:00</div>
-                    </div>
-                    <div id="back" title="Seek Backward">⏪</div>
-                    <div id="play" style="display:block;" title="Play"><strong>▶</strong></div>
-                    <div id="pause" style="display:none;" title="Pause">⏸</div>
-                    <div id="forward" title="Seek Forward">⏩</div>    
-                    <div id="minip" style="display:block;" title="Click to go in Picture in Picture Mode"> <strong>◲</strong></div>
-                    <div id="fullscr" style="display:block;"title="Click for Fullscreen Mode"><strong>↔</strong></div>
-                    <div id="volumectrl">
-                        <div id="voln" style="display:block" title="Click to Mute">
-                            😁
+                        <div id="controlscontainer">
+                            <input id="progress" min="0" max="100" title="Seek" type="range" steps="any" value="0">
+                            <div id="controls">
+                                <div id="timer">
+                                    <div class="currtime">0:00</div>
+                                        &ensp; / &ensp;
+                                    <div class="totaltime">00:00</div>
+                                </div>
+                                <div id="back" title="Seek Backward">⏪</div>
+                                <div id="play" style="display:block;" title="Play"><strong>▶</strong></div>
+                                <div id="pause" style="display:none;" title="Pause">⏸</div>
+                                <div id="forward" title="Seek Forward">⏩</div>    
+                                <div id="minip" style="display:block;" title="Click to go in Picture in Picture Mode"> <strong>◲</strong></div>
+                                <div id="fullscr" style="display:block;"title="Click for Fullscreen Mode"><strong>↔</strong></div>
+                                <div id="volumectrl">
+                                    <div id="voln" style="display:block" title="Click to Mute">
+                                        😁
+                                    </div>
+                                    <div id="mute" style="display:none" title="Click to Unmute">
+                                        🤐
+                                    </div>
+				    <div id="volval">100</div>
+                                    <input type="range" min="0" max="100" steps="any" value="100" id="volslider" title="Volume">
+                                    
+                                </div>
+                            </div>
                         </div>
-                        <div id="mute" style="display:none" title="Click to Unmute">
-                            🤐
-                        </div>
-                        <input type="range" min="0" max="100" steps="any" value="100" id="volslider" title="Volume">
-                        <div id="volval">100</div>
                     </div>
-                </div>
-            </div>
-        </div>
-    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+                    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 </body>
 </html>
