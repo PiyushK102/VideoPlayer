@@ -56,7 +56,7 @@ body{
 #controls{
     //display: flex;
     //flex-direction:row;
-    display:grid;
+    display:inline-grid;
     grid-auto-flow:column;
     gap:2px;
     width:100%;
