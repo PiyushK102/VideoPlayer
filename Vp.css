@@ -185,13 +185,13 @@ body{
     }
     #screen{ 
         width:100%;
-        height:450px;
+        height:300px;
         margin:0;
         padding:0;
     }
     #divscreen{
         width:100%;
-        height:450px;
+        height:300px;
         margin:1% 0 1% 0;
     }
     #controlscontainer{ 
