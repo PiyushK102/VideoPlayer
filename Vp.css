@@ -54,8 +54,11 @@ body{
     bottom:0;
 }
 #controls{
-    display: flex;
-    flex-direction: row;
+    //display: flex;
+    //flex-direction:row;
+    display:grid;
+    grid-auto-flow:column;
+    gap:2px;
     width:100%;
     height:75%;
     align-content: center;
@@ -86,7 +89,6 @@ body{
     border:1px solid black;
     position: static;
     padding:3px;
-    margin: 0 3px 0 3px;
     color:black;
 }
 
@@ -147,7 +149,7 @@ body{
 }
 #progress{
 
-    width:100%;
+    width:98%;
     height: 3px;
     margin:10px;
     background-color: rgb(33, 255, 140);
@@ -165,8 +167,6 @@ body{
 
 #timer{
     display: flex;
-    margin-right: 5px;
-    margin-left: 5px;
     align-items: center;
     align-content: center;
     border:1px solid black;
