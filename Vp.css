@@ -204,7 +204,8 @@ body{
         align-items: center;
         vertical-align: middle;
         text-align: center;
-        background:linear-gradient(toTop,rgb(39, 39, 39),rgba(0, 0, 0, 0.655),rgba(0, 0, 0, 0.31));
+        //background:linear-gradient(toTop,rgb(39, 39, 39),rgba(0, 0, 0, 0.655),rgba(0, 0, 0, 0.31));
+	background-color:rgba(85, 85, 85, 0.767);
         opacity: 1;
         border: none;
         padding:5px 0 5px 0;
