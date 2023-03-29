@@ -50,6 +50,7 @@
     height:80vh;
     background-color: rgb(138, 138, 138);
     padding:0.5%;
+    margin: 0 0.1% 0.1% 0.5%;
     overflow-y: scroll;
     border-radius: 10px;
 }
@@ -264,6 +265,7 @@
         width: 99%;
         height:36vh;
         align-items: center;
+        margin: 0;
     }
     ::-webkit-scrollbar{
         height:5px;
@@ -335,6 +337,7 @@
         width: 20%;
         height:96vh;
         align-items: center;
+        margin: 0;
     }
     ::-webkit-scrollbar{
         height:5px;
@@ -391,6 +394,7 @@
         width: 99%;
         align-items: center;
 	    height:30vh;
+        margin: 0;
     }
     ::-webkit-scrollbar{
         width:3px;
