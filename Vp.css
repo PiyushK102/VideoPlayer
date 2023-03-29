@@ -15,15 +15,18 @@
     display:flex;
     flex-direction: row;
     width:100%;
-    height:93.5vh;
+    height:85vh;
+    z-index: 100;
+    padding: 0.01%;
 }
 #divscreen{
     display: flex;
     flex-direction: column;
-    width:65%;
+    width:64%;
     height: fit-content;
     background-color: rgb(68, 68, 68);
     overflow: hidden;
+    border-radius: 10px;
     
 }
 #videonamediv{
@@ -43,16 +46,12 @@
 #playlistbox{
     display:flex;
     flex-direction: column;
-    width:35%;
-    height:90vh;
+    width:34%;
+    height:80vh;
     background-color: rgb(138, 138, 138);
     padding:0.5%;
     overflow-y: scroll;
-}
-#playlistbutton{
-    width:40px;
-    height:40px;
-    display:none;
+    border-radius: 10px;
 }
 #video{
     display: flex;
@@ -107,9 +106,10 @@
 }
 ::-webkit-scrollbar-thumb{
     background-color: blue;
+    border-radius: 10px 10px 10px 10px;
 }
 ::-webkit-scrollbar-track{
-    background-color: rgba(0, 183, 255, 0.5);
+    background-color: rgb(138, 138, 138);
     border-radius: 0 10px 10px 0;
 }
 
@@ -245,7 +245,7 @@
         display: flex;
         flex-direction:column;
         width:95%;
-	margin:10px 5px 10px 5px;
+	    margin:10px 5px 10px 5px;
     }
     #Logo img{
         width:150px;
@@ -379,12 +379,8 @@
     #screen{
         width:50%;
         height:40vh;
-<<<<<<< HEAD
         padding: 0;
-<<<<<<< HEAD
         background-color: black;
-=======
-=======
         align-self: center;
         margin: 0.5%;
     }
@@ -394,10 +390,7 @@
         overflow-y: scroll;
         width: 99%;
         align-items: center;
-	height:30vh;
->>>>>>> ccf29fe6cbecefe903146da2c748850c079cc4ea
-
->>>>>>> 671f1cd85c2dd367352b4e2823a058fbabbaff58
+	    height:30vh;
     }
     ::-webkit-scrollbar{
         width:3px;
@@ -455,22 +448,7 @@
         border-radius: 0;
         background-color: transparent;
     }
-    #volslider{
-        display: none;
-        height:auto;
-        position: relative;
-        transition: all 400ms ease-in-out; 
-	    /* -webkit-appearance: slider-vertical; */
-    }
-    #volumectrl{
-        display:block;
-        align-items:center ;
-        align-content:center ;
-        height:25px;
-    	width:50px;
-    	border-radius:25px 25px 25px 25px;
-    	padding:3px 0 3px 0; 
-    }
+
     #back,#play,#forward,#pause,#voln,#mute,#minip,#fullscr{
         width:25px;
         height:25px;
@@ -494,7 +472,7 @@
     #volval{
         font-size: 7;
         color: rgb(0,0,0);
-	border-radius:25px 25px 25px 25px;
+	    border-radius:25px 25px 25px 25px;
     }
     #video:fullscreen{
         z-index: 3;
