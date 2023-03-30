@@ -275,7 +275,7 @@
         background-color: blue;
     }
     ::-webkit-scrollbar-track{
-        background-color: rgba(0, 183, 255, 0.5);
+        background-color: rgb(138, 138, 138);
         border-radius: 0 10px 10px 0;
     }
 
@@ -347,7 +347,7 @@
         background-color: rgb(0, 0, 0);
     }
     ::-webkit-scrollbar-track{
-        background-color: rgba(255, 255, 255, 0.925);
+        background-color: rgb(138, 138, 138);
         border-radius: 0 10px 10px 0;
     }
 
@@ -404,7 +404,7 @@
         background-color: blue;
     }
     ::-webkit-scrollbar-track{
-        background-color: rgba(0, 183, 255, 0.5);
+        background-color: rgb(138, 138, 138);
         border-radius: 0 10px 10px 0;
     }
     
