@@ -21,31 +21,27 @@
             	<source id="videosource"src="https://drive.google.com/uc?id=17fX93QQMP7njPQOnDocSz2VIwqGGJq8P" type="video/mp4">
         	</video>
             <div id="controlscontainer">
-                <input id="progress" min="0" max="100" title="Seek" type="range" steps="any" value="0">
-                <div id="controls">
-                    <div id="timer">
-                        <div class="currtime">0:00</div>
-                        <div>/</div>
-                        <div class="totaltime">00:00</div>
-                    </div>
-                    <div id="back" title="Seek Backward">⏪</div>
-                    <div id="play" style="display:block;" title="Play"><strong>▶</strong></div>
-                    <div id="pause" style="display:none;" title="Pause">⏸</div>
-                    <div id="forward" title="Seek Forward">⏩</div>    
-                    <div id="minip" style="display:block;" title="Click to go in Picture in Picture Mode"> <strong>◲</strong></div>
-                    <div id="fullscr" style="display:block;"title="Click for Fullscreen Mode"><strong><sub>↙</sub><sup>↗</sup></strong></div>
-                    <div id="voln" style="display:block" title="Click to Mute">
-                        🔊
-                    </div>
-                    <div id="mute" style="display:none" title="Click to Unmute">
-                        🔇
-                    </div>
-                    <div id="volumectrl">
-                        <div id="volval">100</div>
-                        <input type="range" min="0" max="100" steps="any" value="100" id="volslider" title="Volume">
-                    </div>
+            <input id="progress" min="0" max="100" title="Seek" type="range" steps="any" value="0">
+            <div id="controls">
+                <div id="timer">
+                    <div class="currtime">0:00</div>
+                    <div>/</div>
+                    <div class="totaltime">00:00</div>
+                </div>
+                <div id="back" title="Seek Backward"><span class="material-symbols-rounded">fast_rewind</span></div>
+                <div id="play" style="display:block;" title="Play"><strong><span class="material-symbols-rounded">play_arrow</span></strong></div>
+                <div id="pause" style="display:none;" title="Pause"><span class="material-symbols-rounded">pause</span></div>
+                <div id="forward" title="Seek Forward"><span class="material-symbols-rounded">fast_forward</span></div>    
+                <div id="minip" style="display:block;" title="Click to go in Picture in Picture Mode"><span class="material-symbols-rounded">pip</span></div>
+                <div id="fullscr" style="display:block;"title="Click for Fullscreen Mode"><span class="material-symbols-rounded">fullscreen</span></div>
+                <div id="voln" style="display:block" title="Click to Mute"><span class="material-symbols-rounded">volume_up</span></div>
+                <div id="mute" style="display:none" title="Click to Unmute"><span class="material-symbols-rounded">volume_off</span></div>
+                <div id="volumectrl">
+                    <div id="volval">100</div>
+                    <input type="range" min="0" max="100" steps="any" value="100" id="volslider" title="Volume">
                 </div>
             </div>
+        </div>
         </div>
         <div id="playlistbox">
         <div id="video"onclick="changevideo('https://drive.google.com/uc?id=17fX93QQMP7njPQOnDocSz2VIwqGGJq8P')" onclick="changename('videoname')"><div id="Logo"><img id ="emoji"src="images/IdatenJumpthumb.jpg"></div><div id="videoname"> Idaten Jump Ep. 01 <img src="images/Vz.jpg" alt=""></div></div>
