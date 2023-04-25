@@ -17,12 +17,54 @@ const seekbar=document.querySelector("#progress");
 const playlistbutton=document.querySelector("#playlistbutton")
 const VideoList=document.querySelector("#playlistbox")
 const videoname=document.querySelector("#videonamediv")
+const ham=document.querySelector(".ham")
+const nav=document.querySelector(".navButtons")
+const hamsym=document.querySelector("#hamsym")
+const closebtn=document.querySelector("#close")
+
 
 
 ///////////////////////////////////-----Video Name Function-------////////////////////////////////////
     function changename(element){
         videoname.innerHTML=element.innerHTML
     }
+    
+    document.addEventListener("loaded",()=>{
+        var winwidth=window.innerWidth
+        var winheight=window.innerHeight
+        document.querySelector("#screensizebox").innerHTML="Width:"+winwidth+" X "+"Height"+winheight;
+        console.log(winheight);
+        console.log(winwidth);
+    })
+    window.addEventListener("resize",()=>{
+        var winwidth=window.innerWidth
+        var winheight=window.innerHeight
+        document.querySelector("#screensizebox").innerHTML="Width:"+winwidth+" X "+"Height"+winheight;
+        console.log(winheight);
+        console.log(winwidth);
+    })
+    window.addEventListener("orientationchange",()=>{
+        var winwidth=window.innerWidth
+        var winheight=window.innerHeight
+        document.querySelector("#screensizebox").innerHTML="Width:"+winwidth+" X "+"Height"+winheight;
+        console.log(winheight);
+        console.log(winwidth);
+    })
+    
+    
+    
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+ham.addEventListener("click",()=>{
+    if(nav.style.display=="block"){
+        hamsym.style.display="none"
+        closebtn.style.display="block"
+    }
+    else{
+        hamsym.style.display="block"
+        closebtn.style.display="none"
+    }
+})
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////-----Change Video Source---------//////////////////////////////////
 function changevideo(e){
