@@ -17,10 +17,7 @@ const seekbar=document.querySelector("#progress");
 const playlistbutton=document.querySelector("#playlistbutton")
 const VideoList=document.querySelector("#playlistbox")
 const videoname=document.querySelector("#videonamediv")
-const ham=document.querySelector(".ham")
-const nav=document.querySelector(".navButtons")
-const hamsym=document.querySelector("#hamsym")
-const closebtn=document.querySelector("#close")
+
 
 
 
@@ -54,18 +51,7 @@ const closebtn=document.querySelector("#close")
     
     
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-ham.addEventListener("click",()=>{
-    if(nav.style.display=="block"){
-        hamsym.style.display="none"
-        closebtn.style.display="block"
-    }
-    else{
-        hamsym.style.display="block"
-        closebtn.style.display="none"
-    }
-})
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+
 ///////////////////////////////////-----Change Video Source---------//////////////////////////////////
 function changevideo(e){
     togglePlayPause();
@@ -78,8 +64,8 @@ function changevideo(e){
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////-----Document Load Time Script-----/////////////////////////////////
 document.addEventListener("loaded",()=>{
-    screen.style.width===(7/9)*window.innerWidth;
-    screen.style.height===(7/9)*window.innerHeight;
+    screen.style.width=(7/9)*window.innerWidth;
+    screen.style.height=(7/9)*window.innerHeight;
     
 })
 //////////////////////////////////////////////////////////////////////////////////////////////////////
