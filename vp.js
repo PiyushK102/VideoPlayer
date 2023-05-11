@@ -19,39 +19,37 @@ const VideoList=document.querySelector("#playlistbox")
 const videoname=document.querySelector("#videonamediv")
 
 
-
-
 ///////////////////////////////////-----Video Name Function-------////////////////////////////////////
-    function changename(element){
-        videoname.innerHTML=element.innerHTML
-    }
-    
-    document.addEventListener("loaded",()=>{
-        var winwidth=window.innerWidth
-        var winheight=window.innerHeight
-        document.querySelector("#screensizebox").innerHTML="Width:"+winwidth+" X "+"Height"+winheight;
-        console.log(winheight);
-        console.log(winwidth);
-    })
-    window.addEventListener("resize",()=>{
-        var winwidth=window.innerWidth
-        var winheight=window.innerHeight
-        document.querySelector("#screensizebox").innerHTML="Width:"+winwidth+" X "+"Height"+winheight;
-        console.log(winheight);
-        console.log(winwidth);
-    })
-    window.addEventListener("orientationchange",()=>{
-        var winwidth=window.innerWidth
-        var winheight=window.innerHeight
-        document.querySelector("#screensizebox").innerHTML="Width:"+winwidth+" X "+"Height"+winheight;
-        console.log(winheight);
-        console.log(winwidth);
-    })
-    
-    
-    
+///////////////////////////////////-----Video Name Function-------////////////////////////////////////
+function changename(element){
+    videoname.innerHTML=element.innerHTML
+}
+
+document.addEventListener("loaded",()=>{
+    var winwidth=window.innerWidth
+    var winheight=window.innerHeight
+    document.querySelector("#screensizebox").innerHTML="Width:"+winwidth+" X "+"Height"+winheight;
+    console.log(winheight);
+    console.log(winwidth);
+})
+window.addEventListener("resize",()=>{
+    var winwidth=window.innerWidth
+    var winheight=window.innerHeight
+    document.querySelector("#screensizebox").innerHTML="Width:"+winwidth+" X "+"Height"+winheight;
+    console.log(winheight);
+    console.log(winwidth);
+})
+window.addEventListener("orientationchange",()=>{
+    var winwidth=window.innerWidth
+    var winheight=window.innerHeight
+    document.querySelector("#screensizebox").innerHTML="Width:"+winwidth+" X "+"Height"+winheight;
+    console.log(winheight);
+    console.log(winwidth);
+})
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////-----Change Video Source---------//////////////////////////////////
 function changevideo(e){
     togglePlayPause();
@@ -64,8 +62,8 @@ function changevideo(e){
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////-----Document Load Time Script-----/////////////////////////////////
 document.addEventListener("loaded",()=>{
-    screen.style.width=(7/9)*window.innerWidth;
-    screen.style.height=(7/9)*window.innerHeight;
+    screen.style.width===(7/9)*window.innerWidth;
+    screen.style.height===(7/9)*window.innerHeight;
     
 })
 //////////////////////////////////////////////////////////////////////////////////////////////////////

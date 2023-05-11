@@ -7,13 +7,15 @@
     vertical-align:middle
 }
 .navButtons button,.socialButtons button{word-wrap:break-word;font-family:DynaPuff,cursive}
-*,li{padding:0;transition:all ease-in-out 0.5s;}#divscreen,.navigation,.socialButtons{height:fit-content}
-#video:hover,hr{background-color:#f0f8ff}#screen,#volval{align-self:center}
+*,li{padding:0;transition:all ease-in-out 0.5s; user-select: none; -moz-user-select: none;}#divscreen,.navigation,.socialButtons{height:fit-content}
+#video:hover,hr{background-color:#ffd0d0}#screen,#volval{align-self:center}
 #videoname,#volumectrl,#volval,.VZ img{vertical-align:middle}
 #videoname img{
-    width:2em;
-    height:2em;
+    width:30px;
+    height:30px;
 }
+#topline{width:100%;height:20px;align-self: flex-start;display:flex;flex-direction: row;align-content: space-around;align-items: center;justify-content: center;background-color: #949494;}
+#videonamediv,#screensizebox{width:50%;height:20px;color:#f0f8ff;background-color:rgba(0,0,0,.455);text-align: center;}
 #timer,#volval,.ham{font-weight:700}
 #timer:hover,#volumectrl:hover{background-color:#fff;box-shadow:2px 2px 3px 3px rgba(128,128,128,.699)}
 hr{height:.2em;border-radius:20px}.VZ{margin:.25% 25%;width:50%}
@@ -54,22 +56,21 @@ li{list-style-type:none;margin-top:.08vw}
 #header,.ham{position:sticky;text-align:center}
 #Logo,#controls,#videoname,.ham{padding:1%}
 *{margin:0}
-body{background-color:rgba(51,51,51,.87)
+body{background-color:rgb(236, 236, 236)
 }
 .ham{display:flex;justify-content:center;justify-items:center;align-items:center;align-content:center;width:40px;height:40px;font-size:12px;background-color:#ebebebb1;border-radius:50%;cursor:pointer;border:2px solid #b1b1b1}
-#divscreen,#playlistbox,#video{border-radius:10px;display:flex}
+#divscreen,#playlistbox,#video{display:flex}
 #header{background-color:#d3d3d3;width:100%;height:6.5vh;top:0;font-size:28px}
-#screendiv{display:flex;flex-direction:row;width:100%;height:85vh;z-index:100;padding:.01%}
-#divscreen{width:64%;background-color:#444;overflow:hidden}
+#screendiv{display:flex;flex-direction:row;width:100%;height:80vh;z-index:100;padding:.01%;align-items: center;}
+#divscreen{width:66%;background-color:#000000;overflow:hidden;height:80vh;padding:0.5%;border-radius: 10px 0 0 10px;}
 .material-symbols-rounded{font-variation-settings:'FILL' 1,'wght' 700,'GRAD' 0,'opsz' 35;text-shadow:2px 2px 2px #838383d0;transition: all ease-in-out 2s;}
-#videonamediv{width:100%;height:6.5vh;padding:.5%;color:#f0f8ff;background-color:rgba(0,0,0,.455)}
 #screen{width:95%;height:60vh;margin:.5%}
-#playlistbox{flex-direction:column;width:34%;height:80vh;background-color:#8a8a8a;padding:.5%;overflow-y:scroll}
-#video{flex-direction:row;border:1px solid #000;justify-items:center;padding:.5%;align-items:center;align-content:center;justify-content:space-around;cursor:pointer;background-color:azure;margin:10px 5px}
+#playlistbox{flex-direction:column;width:34%;height:80vh;background-color:#000000;padding:.5%;overflow-y:scroll;border-radius: 0 10px 10px 0;}
+#video{flex-direction:row;border:1px solid #000;border-radius:10px;padding:.5%;align-items:center;align-content:center;justify-content:space-around;cursor:pointer;background-color:azure;margin:10px 5px}
 #video:hover{font-weight:bolder}
 #Logo img{width:250px;height:200px;border-radius:10px;flex-shrink:inherit}
 #videoname{flex-shrink:inherit}
-#controlscontainer{display:flex;flex-direction:column;background-color:#a9a9a9;padding:1%}
+#controlscontainer{display:flex;flex-direction:column;background-color:#a9a9a9;padding:1%;position:sticky;bottom:0}
 #controls{display:flex;flex-direction:row;background-color:#e3e3e3;border-radius:20px;justify-content:space-around}
 ::-webkit-scrollbar{width:10px;border-radius:0 10px 10px 0}
 ::-webkit-scrollbar-thumb{background-color:#00f;border-radius:10px}
@@ -84,10 +85,12 @@ body{background-color:rgba(51,51,51,.87)
 #volumectrl:hover{border-radius:25px}
 #progress{width:98%;height:3px;margin:10px;background-color:#21ff8c;border-radius:50%;position:static}
 #progress:hover{height:5px;cursor:pointer}
-#timer{display:flex;align-items:center;border-radius:25px;z-index:2147483648;color:#000;height:25px;padding:3px 5px}
+#timer{display:flex;align-items:center;border-radius:25px;z-index:150;color:#000;height:25px;padding:3px 5px}
 #video:fullscreen{z-index:3}
+#videoname img{width:30px;height:30px;vertical-align: middle;}
+
 @media screen and (min-width:350px) and (max-width:600px) and (min-height:500px){
-    #divscreen,#screendiv{flex-direction:column;display:flex}
+    #divscreen,#screendiv{flex-direction:column;display:flex;align-content:space-evenly;}
     #divscreen,#header{position:sticky;width:100%}
     #header{text-align:center;background-color:#d3d3d3;height:4vh;top:0;font-size:14px}
     #divscreen{height:60vh;background-color:#444;top:4vh}
@@ -95,6 +98,7 @@ body{background-color:rgba(51,51,51,.87)
     #video{display:flex;flex-direction:column;width:95%;margin:10px 5px}
     #Logo img{width:150px;height:120px}
     #videoname{padding:1%;vertical-align:middle;flex-shrink:inherit;}
+    #videoname img{width:30px;height:30px;vertical-align: middle;}
     #playlistbox{display:flex;flex-direction:row;overflow-x:scroll;overflow-y:hidden;width:99%;height:36vh;align-items:center}
     ::-webkit-scrollbar{height:5px;border-radius:0 0 10px 10px}
     ::-webkit-scrollbar-thumb{background-color:#00f}
@@ -109,7 +113,7 @@ body{background-color:rgba(51,51,51,.87)
     #video{display:flex;flex-direction:column;width:97%;margin:3px 2px}
     #Logo img{width:70px;height:50px}
     #videoname{padding:1%;vertical-align:middle;flex-shrink:inherit;font-size:10px}
-    #videoname img{width:10px;height:10px}
+    #videoname img{width:30px;height:30px;vertical-align: middle;}
     #playlistbox{flex-direction:column;overflow-x:hidden;overflow-y:scroll;width:20%;align-items:center}
     ::-webkit-scrollbar{height:5px;border-radius:0 0 10px 10px}
     ::-webkit-scrollbar-thumb{background-color:#000}
@@ -138,4 +142,6 @@ body{background-color:rgba(51,51,51,.87)
     #video:fullscreen{z-index:3}
     #progress{height:2px;width:98%;margin-left:1%;margin-right:1%}
     #progress:hover{height:5px}
+    #videoname img{width:30px;height:30px;vertical-align: middle;}
+
 }
