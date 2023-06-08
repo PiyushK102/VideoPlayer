@@ -102,15 +102,16 @@ function display(element) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////----Screen Modes----/////////////////////////////////////////////////////////////
 fullscrbtn.addEventListener("click",fullscreen)
+// closefscreen.addEventListener("click",fullscreen)
 Video.addEventListener("dblclick",fullscreen)
 function fullscreen(){
-   if(fullscrbtn.requestFullscreen ||Video.requestFullscreen)
+   if(document.fullscreenElement==null)
    {
-        Video.requestFullscreen();
+        Videocontainer.requestFullscreen();
    }
-   else if(Video.requestFullscreen==true)
+   else if(document.fullscreenElement!=null)
    {
-        Video.exitFullscreen();
+        Videocontainer.exitFullscreen();
    }
   
 }
