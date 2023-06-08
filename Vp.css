@@ -6,6 +6,9 @@
     width:1.5em;
     vertical-align:middle
 }
+#controlon,#controloff{
+    cursor: pointer;
+}
 #close{
 color:red;
 }
@@ -68,7 +71,7 @@ body{background-color:rgb(236, 236, 236)
     width:100%;
     margin:0;
 }
-#playlistbox{flex-direction:column;width:33%;height:85vh;background-color:#0000003d;padding:.5%;overflow-y:scroll;border-radius: 0 10px 10px 0;}
+#playlistbox{flex-direction:column;width:33%;height:85vh;background-color:#000000;padding:.5%;overflow-y:scroll;border-radius: 0 10px 10px 0;}
 #video{flex-direction:row;padding:.5%;align-items:center;align-content:center;justify-content:space-around;cursor:pointer;background-color:azure;margin:10px 5px}
 #video:hover{font-weight:bolder;border-left:10px solid; border-image:linear-gradient( red,yellow,orange,green,purple,blue)2;}
 #Logo img{width:250px;height:200px;border-radius:10px;flex-shrink:inherit}

@@ -17,37 +17,41 @@ const seekbar=document.querySelector("#progress");
 const playlistbutton=document.querySelector("#playlistbutton")
 const VideoList=document.querySelector("#playlistbox")
 const videoname=document.querySelector("#videonamediv")
+const ham=document.querySelector(".ham")
+const nav=document.querySelector(".navButtons")
+const hamsym=document.querySelector("#hamsym")
+const closebtn=document.querySelector("#close")
+const closefscreen=document.querySelector("#exitfscreen")
+const Social=document.querySelector(".Social")
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////-----Video Name Function-------////////////////////////////////////
-///////////////////////////////////-----Video Name Function-------////////////////////////////////////
-function changename(element){
-    videoname.innerHTML=element.innerHTML
-}
-
-document.addEventListener("loaded",()=>{
-    var winwidth=window.innerWidth
-    var winheight=window.innerHeight
-    document.querySelector("#screensizebox").innerHTML="Width:"+winwidth+" X "+"Height"+winheight;
-    console.log(winheight);
-    console.log(winwidth);
-})
-window.addEventListener("resize",()=>{
-    var winwidth=window.innerWidth
-    var winheight=window.innerHeight
-    document.querySelector("#screensizebox").innerHTML="Width:"+winwidth+" X "+"Height"+winheight;
-    console.log(winheight);
-    console.log(winwidth);
-})
-window.addEventListener("orientationchange",()=>{
-    var winwidth=window.innerWidth
-    var winheight=window.innerHeight
-    document.querySelector("#screensizebox").innerHTML="Width:"+winwidth+" X "+"Height"+winheight;
-    console.log(winheight);
-    console.log(winwidth);
-})
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+    function changename(element){
+        videoname.innerHTML=element.innerHTML
+    }
+    
+    document.addEventListener("loaded",()=>{
+        var winwidth=window.innerWidth
+        var winheight=window.innerHeight
+        document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
+        console.log(winheight);
+        console.log(winwidth);
+    })
+    window.addEventListener("resize",()=>{
+        var winwidth=window.innerWidth
+        var winheight=window.innerHeight
+        document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
+        console.log(winheight);
+        console.log(winwidth);
+    })
+    window.addEventListener("orientationchange",()=>{
+        var winwidth=window.innerWidth
+        var winheight=window.innerHeight
+        document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
+        console.log(winheight);
+        console.log(winwidth);
+    })
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////-----Change Video Source---------//////////////////////////////////
@@ -60,19 +64,12 @@ function changevideo(e){
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////-----Document Load Time Script-----/////////////////////////////////
-document.addEventListener("loaded",()=>{
-    screen.style.width===(7/9)*window.innerWidth;
-    screen.style.height===(7/9)*window.innerHeight;
-    
-})
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////----Play Pause operation----///////////////////////////////////////
 
 playbtn.addEventListener("click" , togglePlayPause)
 Video.addEventListener("click",togglePlayPause) 
 pausebtn.addEventListener("click",togglePlayPause)
-controls.addEventListener("hover",display)
+
 
 function togglePlayPause(){
     if(Video.paused==true)
@@ -80,25 +77,43 @@ function togglePlayPause(){
         Video.play()
         pausebtn.style.display="block"
         playbtn.style.display="none"
+
     }
     else{
         Video.pause()
         playbtn.style.display="block"
         pausebtn.style.display="none"
-        
     }   
 }
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////-------PlaylistBox Display-------/////////////////////////////////
-function display(element) {
-    if (document.getElementById(element).style.display == "none") {
-        document.getElementById(element).style.display = "block";
+function controldisplay(btn){
+    if (document.getElementById(btn).style.display == "none") {
+        document.getElementById(btn).style.display = "block";
+        document.getElementById("controloff").style.display="block"
+        document.getElementById("controlon").style.display="none"
+        Video.style.height="65vh"
+        
+
         
         } 
     else {
-        document.getElementById(element).style.display = "none";
-    }
+        document.getElementById(btn).style.display = "none";
+        document.getElementById("controlon").style.display="block"
+        document.getElementById("controloff").style.display="none"
+        Video.style.height="75vh"
+        
+    } 
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////-------PlaylistBox Display-------/////////////////////////////////
+// function display(element) {
+//     if (document.getElementById(element).style.display == "none") {
+//         document.getElementById(element).style.display = "block";
+        
+//         } 
+//     else {
+//         document.getElementById(element).style.display = "none";
+//     }
+// }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////----Screen Modes----/////////////////////////////////////////////////////////////
 fullscrbtn.addEventListener("click",fullscreen)
@@ -115,6 +130,9 @@ function fullscreen(){
    }
   
 }
+// document.addEventListener("fullscreenchange",()=>{
+
+// })
 mpbtn.addEventListener("click",pipmode)
 function pipmode() {
     if (mpbtn.pictureInPictureElement) {
@@ -158,12 +176,16 @@ function toggleMute()
    else{
         mute.style.display="none"
         volvalue.style.display="block"
-        volval.innerHTML=Math.ceil((Video.volume)*100)
-        vol.value=Math.floor((Video.volume)*100)
+        volval.innerHTML=Math.round((Video.volume)*100)
+        vol.value=Math.round((Video.volume)*100)
    }
 }
-
-
+function volpm(vvalue){
+    
+    Video.volume+=vvalue/100
+    vol.value=(Video.volume)*100
+    volval.innerHTML=(vol.value)
+}
 /////////////////////////////////////////////////////////////////
 /////////////////--------ProgressBar-----------////////////////////
 
@@ -216,19 +238,8 @@ function skip(duration){
     
     Video.currentTime+=duration
 }
-forward.addEventListener("click",skipf)
-function skipf(duration)
-{
-    duration=10;
-    Video.currentTime+=duration
-
-}
-function skipb(duration)
-{
-    duration=5;
-    Video.currentTime-=duration
-}
-back.addEventListener("click",skipb)
+forward.addEventListener("click",skip(10))
+back.addEventListener("click",skip(-5))
 ///////////////////////////////////////////////////////////////////
 document.addEventListener("keydown", e =>{
     switch(e.key.toLowerCase()){
@@ -255,6 +266,15 @@ document.addEventListener("keydown", e =>{
         case "o":
             pipmode()
             break
+        case "arrowup":
+            case "AudioVolumeUp":
+                volpm(1)
+                break
+        case "arrowdown":
+            case "AudioVolumeDown":
+            case "DOM_VK_VOLUME_DOWN":
+                volpm(-1)
+                break 
     }   
 })
 
