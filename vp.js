@@ -14,15 +14,10 @@ const mute=document.querySelector("#mute");
 const currentTimeElement=document.querySelector(".currtime");
 const totalTimeElement=document.querySelector(".totaltime");
 const seekbar=document.querySelector("#progress");
-const playlistbutton=document.querySelector("#playlistbutton")
 const VideoList=document.querySelector("#playlistbox")
 const videoname=document.querySelector("#videonamediv")
-const ham=document.querySelector(".ham")
-const nav=document.querySelector(".navButtons")
-const hamsym=document.querySelector("#hamsym")
-const closebtn=document.querySelector("#close")
 const closefscreen=document.querySelector("#exitfscreen")
-const Social=document.querySelector(".Social")
+
 
 ///////////////////////////////////-----Video Name Function-------///////////////////////////////////////////////////////////////
     function changename(element){
@@ -51,22 +46,6 @@ const Social=document.querySelector(".Social")
         console.log(winwidth);
     })
     
-    
-    
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-// ham.addEventListener("click",()=>{
-//     if(nav.style.display=="block"){
-//         hamsym.style.display="none"
-//         closebtn.style.display="block"
-//     }
-//     else{
-//         hamsym.style.display="block"
-//         closebtn.style.display="none"
-//     }
-// })
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////-----Change Video Source---------//////////////////////////////////
@@ -79,13 +58,6 @@ function changevideo(e){
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////-----Document Load Time Script-----/////////////////////////////////
-// document.addEventListener("loaded",()=>{
-//     screen.style.width===(7/9)*window.innerWidth;
-//     screen.style.height===(7/9)*window.innerHeight;
-    
-// })
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////----Play Pause operation----///////////////////////////////////////
 
 playbtn.addEventListener("click" , togglePlayPause)
@@ -138,9 +110,6 @@ function fullscreen(){
    }
   
 }
-// document.addEventListener("fullscreenchange",()=>{
-
-// })
 mpbtn.addEventListener("click",pipmode)
 function pipmode() {
     if (mpbtn.pictureInPictureElement) {
@@ -241,8 +210,8 @@ function formatDuration(time){
         }:${leadingZeroFormatter.format(sec)}`
     }
 }
-forward.addEventListener("click",skip(10))
-back.addEventListener("click",skip(-5))
+forward.addEventListener("click",()=>{skip(10)})
+back.addEventListener("click",()=>{skip(-5)})
 function skip(duration){
     
     Video.currentTime+=duration
