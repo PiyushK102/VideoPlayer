@@ -1,16 +1,16 @@
 @import url(https://fonts.googleapis.com/css2?family=DynaPuff&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);
 @import url(https://colorhunt.co/palette/b1b2ffaac4ffd2daffeef1ff);
-.VZ img,.ham img,.navigation img{
-    height:1.5em;
-    width:1.5em;
+.VZ img,.navigation img,.socialButtons img{
+    height:2vw;
+    width:2vw;
     vertical-align:middle
-}
-#controlon,#controloff{
-    cursor: pointer;
 }
 #close{
 color:red;
+}
+#controlon,#controloff{
+    cursor: pointer;
 }
 .navButtons button,.socialButtons button{word-wrap:break-word;font-family:DynaPuff,cursive}
 *{padding:0;transition:all ease-in-out 0.5s; user-select: none; -moz-user-select: none;}
@@ -29,10 +29,10 @@ hr{height:.2em;border-radius:20px}.VZ{margin:.25% 25%;width:50%}
 #timer,#volumectrl,.navigation{align-content:center;width:fit-content}
 .navigation{position:fixed;display:flex;flex-direction:column;align-items:center;top:0;left:0;z-index:200}
 #divscreen,.ham{flex-direction:column}
-.ham img,.navigation img{border-radius:50%;border:2px solid #757575}
+.socialButtons img,.navigation img{border-radius:50%;border:2px solid #515151}
 .VZ img{border-radius:50%;border:2px solid #000}
 .ham:hover+.navButtons{display:inline-block}
-.navButtons button{width:10em;height:5em;overflow:hidden;padding:.01em;border-radius:20px;font-size:12px;border-color:#848484;background-color:#fff;transition:width .1s,height .1s,background-color .5s,border-color .1s;color:#00f}
+.navButtons button{ display:flex;flex-direction:row;width:15em;height:5em;overflow:hidden;padding:.5em;border-radius:10px;font-size:12px;border-color:#848484;background-color:#fff;transition:width .1s,height .1s,background-color .5s,border-color .1s;color:#00f;align-items: center;}
 .navButtons{background-color:rgba(39,39,39,.87);border-radius:10px;padding:2%}
 .socialButtons,.socialButtons:hover{position:absolute;background-color:rgba(255,255,255,.818);text-align:center}
 .navButtons button:hover{background-color:#002ca5;border-color:#fff;border-width:.8mm;color:#fff;cursor:pointer}
@@ -40,14 +40,17 @@ hr{height:.2em;border-radius:20px}.VZ{margin:.25% 25%;width:50%}
 .Social a,.navigation a{color:#000;padding:3px 0;text-decoration:none;}
 li{list-style-type:none;margin-top:.08vw}
 .Social{text-align:center}
-.socialButtons{width:inherit;padding:1% 2%;border:2px solid #000;border-radius:20px}
+.socialButtons{width:fit-content;padding:1% 2%;border:2px solid #000;border-radius:20px}
 .Social:hover .socialButtons{display:inline-block;transition:display 20ms}
 .socialButtons:hover{display:inline-flex;box-shadow:0 8px 8px 0 rgba(0,0,0,.2);z-index:5}
-.socialButtons img{border-width:1px;border-color:#f0f8ff}
-.socialButtons button{width:10em;height:4em;padding:1%;border-radius:20px;font-size:10px;border-color:#383838;background-color:#fff;color:#00f;margin:1%}
+.socialButtons button{width:12em;height:4em;padding:1%;border-radius:20px;font-size:10px;border-color:#383838;background-color:#fff;color:#00f;margin:1%;padding:0.5em;}
 .socialButtons button:hover{background-color:#ffeded;border:2px solid #0ff outset 2px ;color:#000;}
 @media screen and (max-width:980px)
 {
+    .VZ img,.navigation img,.socialButtons img{
+        height:30px;
+        width:30px;
+    }
     body{text-align:center}
     .navigation{position:fixed;top:0;left:0;padding:.05vw}
     .navButtons{background-color:rgba(51,51,51,.87);border-radius:10px;padding:1%}
@@ -65,13 +68,13 @@ body{background-color:rgb(236, 236, 236)
 #header{background-color:#d3d3d3;width:100%;height:6.5vh;top:0;font-size:28px}
 #screendiv{display:flex;flex-direction:row;width:99%;height:85vh;z-index:100;padding:.5%;align-items: center;}
 #divscreen{width:65%;background-color:#000000;overflow:hidden;height:85vh;padding:0.5%;border-radius: 10px 0 0 10px;justify-content: center;}
-.material-symbols-rounded{font-variation-settings:'FILL' 1,'wght' 700,'GRAD' 0,'opsz' 35;transition: all ease-in-out 2s;}
+.material-symbols-rounded{font-variation-settings:'FILL' 0,'wght' 700,'GRAD' 0,'opsz' 35;}
 #screen{width:100%;height:65vh;margin:8px;}
 #videosource{
     width:100%;
     margin:0;
 }
-#playlistbox{flex-direction:column;width:33%;height:85vh;background-color:#000000;padding:.5%;overflow-y:scroll;border-radius: 0 10px 10px 0;}
+#playlistbox{flex-direction:column;width:33%;height:85vh;background-color:#000000;padding:0.5%;overflow-y:scroll;border-radius: 0 10px 10px 0;}
 #video{flex-direction:row;padding:.5%;align-items:center;align-content:center;justify-content:space-around;cursor:pointer;background-color:azure;margin:10px 5px}
 #video:hover{font-weight:bolder;border-left:10px solid; border-image:linear-gradient( red,yellow,orange,green,purple,blue)2;}
 #Logo img{width:250px;height:200px;border-radius:10px;flex-shrink:inherit}
@@ -85,7 +88,7 @@ body{background-color:rgb(236, 236, 236)
 #back:hover,#forward:hover,#fullscr:hover,#exitfullscr:hover,#minip:hover,#mute:hover,#pause:hover,#play:hover,#voln:hover{padding:3px;border-radius:50%;box-shadow:0px 0px 2px 2px rgba(255, 255, 255, 0.699)}
 #back:active,#forward:active,#fullscr:active,#exitfullscr:active,#minip:active,#mute:active,#pause:active,#play:active,#voln:active{border:2px solid #faffff;background-color:#fff}
 #volumectrl{display:flex;align-items:center;justify-content:center;justify-items:center;height:25px;padding:5px 5px}
-#volslider{display:none;width:100px;transition:450ms ease-in-out;z-index:2;height:10px;accent-color:rgb(255, 255, 255) ;}
+#volslider{display:none;width:100px;transition:450ms ease-in-out;z-index:2;height:10px;accent-color:rgb(255, 255, 255) ; vertical-align: middle;}
 #volval{font-size:"12px";color:#ffffff;padding:3px;width:50px;height:25px;text-align:center;vertical-align: middle;}
 #volslider:focus-within,#volumectrl:hover #volslider{display:block;cursor:pointer;background-color:#fff}
 #volumectrl:hover{border-radius:25px}
@@ -95,6 +98,8 @@ body{background-color:rgb(236, 236, 236)
 #video:fullscreen{z-index:3}
 #videoname img{width:30px;height:30px;vertical-align: middle;}
 #controlon,#controloff {font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: rgb(0, 0, 0);align-items: center;align-content: center;text-align:center;justify-content: center;border-radius: 10px;background-color: transparent;}
+#controloff {font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz'20;}
+
 
 @media screen and (min-width:250px) and (max-width:600px) and (min-height:500px){
     .material-symbols-rounded{font-variation-settings:'FILL' 1,'wght' 700,'GRAD' 0,'opsz' 8;font-size:10px ;text-align:center;vertical-align:baseline;}
@@ -112,13 +117,14 @@ body{background-color:rgb(236, 236, 236)
     #Logo img{width:150px;height:120px}
     #videoname{padding:1%;vertical-align:middle;flex-shrink:inherit;}
     #videoname img{width:30px;height:30px;vertical-align: middle;}
-    #playlistbox{display:flex;flex-direction:row;overflow-x:scroll;overflow-y:hidden;width:99%;height:36vh;align-items:center;border-radius:10px;border-radius:10px;}
+    #playlistbox{display:flex;flex-direction:row;overflow-x:scroll;overflow-y:hidden;width:99%;height:36vh;align-items:center;border-radius: 0;}
     ::-webkit-scrollbar{height:8px;border-radius:0 0 10px 10px}
     ::-webkit-scrollbar-thumb{background-color:#00f}
     ::-webkit-scrollbar-track{background-color:rgba(0,183,255,.5);border-radius:0 0 10px 10px}
     .socialButtons button{width:15em;height:5em;padding:1%;border-radius:20px;font-size:10px;border-color:#383838;background-color:#fff;color:#00f}
-    .socialButtons{width:20em;height:fit-content;}
+    .socialButtons{width:fit-content;height:fit-content;}
     #controlon,#controloff {font-variation-settings:'FILL' 1,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: black;}
+    #controloff {font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz'20;}
 }
 @media screen and (min-width:500px) and (max-width:1000px) and (max-height:500px){
     #divscreen,#playlistbox{display:flex;height:96vh}
@@ -130,13 +136,15 @@ body{background-color:rgb(236, 236, 236)
     #Logo img{width:70px;height:50px}
     #videoname{padding:1%;vertical-align:middle;flex-shrink:inherit;font-size:10px}
     #videoname img{width:30px;height:30px;vertical-align: middle;}
-    #playlistbox{flex-direction:column;overflow-x:hidden;overflow-y:scroll;width:20%;align-items:center}
+    #playlistbox{flex-direction:column;overflow-x:hidden;overflow-y:scroll;width:20%;align-items:center;border-radius: 0;}
     ::-webkit-scrollbar{height:8px;border-radius:0 10px 10px 0}
     ::-webkit-scrollbar-thumb{background-color:#000}
     ::-webkit-scrollbar-track{background-color:rgba(255,255,255,.925);border-radius:0 10px 10px 0}
     .socialButtons button{width:15em;height:5em;padding:1%;border-radius:20px;font-size:10px;border-color:#383838;background-color:#fff;color:#00f}
-    .socialButtons{width:20em;height:fit-content;}
+    .socialButtons{width:fit-content;height:fit-content;}
     #controlon,#controloff {font-variation-settings:'FILL' 1,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: black;}
+    #controloff {font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz'20;}
+
 }
 @media screen and (min-width:600px) and (max-width:1200px)and (min-height:600px) and (max-height:1300px){
     #divscreen,#screendiv{flex-direction:column;display:flex}
@@ -146,7 +154,7 @@ body{background-color:rgb(236, 236, 236)
     #header{text-align:center;background-color:#d3d3d3;height:4vh;top:0;font-size:14px}
     #divscreen{height:65vh;background-color:#444;top:4vh;border-radius:0;}
     #screen{width:50%;height:40vh;background-color:#000;align-self:center;margin:.5%}
-    #playlistbox{display:flex;flex-direction:column;overflow-y:scroll;width:99%;align-items:center;height:30vh;border-radius:10px;}
+    #playlistbox{display:flex;flex-direction:column;overflow-y:scroll;width:99%;align-items:center;height:30vh;border-radius: 0;}
     ::-webkit-scrollbar{width:8px;border-radius:0 0 10px 10px}
     ::-webkit-scrollbar-thumb{background-color:#00f}
     ::-webkit-scrollbar-track{background-color:rgba(0,183,255,.5);border-radius:0 10px 10px 0}
@@ -157,13 +165,15 @@ body{background-color:rgb(236, 236, 236)
     #controls{flex-direction:row;height:75%;justify-content:center;justify-items:center;align-items:center;z-index:100000000;transition:opacity 150ms ease-in-out;border-radius:0;background-color:transparent}
     #back,#forward,#fullscr,#exitfullscr,#minip,#mute,#pause,#play,#voln{width:25px;height:25px;cursor:pointer;align-content:center;align-items:center;text-align:center;vertical-align:middle;background-color:transparent;overflow:hidden;border-radius:2px;position:relative;padding:3px;margin:0 3px}
     #back:hover,#forward:hover,#fullscr:hover,#exitfullscr:hover,#minip:hover,#mute:hover,#pause:hover,#play:hover,#voln:hover{background-color:#fff;border-radius:50%;padding:3px}
-    #volval{font-size:7;color:#ffffff;border-radius:25px}
+    #volval{font-size:7;color:#ffffff;border-radius:25px; vertical-align: middle;text-align: center;}
     #video:fullscreen{z-index:3}
     #progress{height:2px;width:98%;margin-left:1%;margin-right:1%}
     #progress:hover{height:5px}
     #videoname img{width:30px;height:30px;vertical-align: middle;}
     .socialButtons button{width:15em;height:5em;padding:1%;border-radius:20px;font-size:10px;border-color:#383838;background-color:#fff;color:#00f}
-    .socialButtons{width:20em;height:fit-content;}
+    .socialButtons{width:fit-content;height:fit-content;}
     #controlon,#controloff {font-variation-settings:'FILL' 1,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: black;}
+    #controloff {font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz'20;}
+
 
 }
