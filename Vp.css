@@ -9,9 +9,6 @@
 #close{
 color:red;
 }
-#controlon,#controloff{
-    cursor: pointer;
-}
 .navButtons button,.socialButtons button{word-wrap:break-word;font-family:DynaPuff,cursive}
 *{padding:0;transition:all ease-in-out 0.5s; user-select: none; -moz-user-select: none;}
 #divscreen,.navigation,.socialButtons{height:fit-content}
@@ -62,18 +59,13 @@ li{list-style-type:none;margin-top:.08vw}
 *{margin:0}
 body{background-color:rgb(236, 236, 236)
 }
-#controllock{width:25px;height:25px;background-color: transparent;}
 .ham{display:flex;justify-content:center;justify-items:center;align-items:center;align-content:center;font-size:12px;background-color:#ebebebb1;border-radius:50%;cursor:pointer;border:2px solid #b1b1b1}
 #divscreen,#playlistbox,#video{display:flex}
 #header{background-color:#d3d3d3;width:100%;height:6.5vh;top:0;font-size:28px}
 #screendiv{display:flex;flex-direction:row;width:99%;height:85vh;z-index:100;padding:.5%;align-items: center;}
 #divscreen{width:65%;background-color:#000000;overflow:hidden;height:85vh;padding:0.5%;border-radius: 10px 0 0 10px;justify-content: center;}
-.material-symbols-rounded{font-variation-settings:'FILL' 0,'wght' 700,'GRAD' 0,'opsz' 35;}
+#controls .material-symbols-rounded{font-variation-settings:'FILL' 0,'wght' 700,'GRAD' 0,'opsz' 35;}
 #screen{width:100%;height:65vh;margin:8px;}
-#videosource{
-    width:100%;
-    margin:0;
-}
 #playlistbox{flex-direction:column;width:33%;height:85vh;background-color:#000000;padding:0.5%;overflow-y:scroll;border-radius: 0 10px 10px 0;}
 #video{flex-direction:row;padding:.5%;align-items:center;align-content:center;justify-content:space-around;cursor:pointer;background-color:azure;margin:10px 5px}
 #video:hover{font-weight:bolder;border-left:10px solid; border-image:linear-gradient( red,yellow,orange,green,purple,blue)2;}
@@ -97,8 +89,8 @@ body{background-color:rgb(236, 236, 236)
 #timer{display:flex;align-items:center;border-radius:25px;z-index:150;color:#ffffff;height:25px;padding:3px 5px}
 #video:fullscreen{z-index:3}
 #videoname img{width:30px;height:30px;vertical-align: middle;}
-#controlon,#controloff {font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: rgb(0, 0, 0);align-items: center;align-content: center;text-align:center;justify-content: center;border-radius: 10px;background-color: transparent;}
-#controloff {font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz'20;}
+#controlon ,#controloff{cursor: pointer;transition: all ease-in-out 1s;width:25px;height:25px;color: rgb(255, 255, 255);align-items: center;align-content: center;text-align:center;justify-content: center;border-radius: 10px;background-color: #000000;}
+#controloff{color: rgb(255, 255, 255);}
 
 
 @media screen and (min-width:250px) and (max-width:600px) and (min-height:500px){
@@ -110,7 +102,7 @@ body{background-color:rgb(236, 236, 236)
     #divscreen,#screendiv{flex-direction:column;display:flex;align-content:space-evenly;}
     #divscreen,#header{position:sticky;width:100%}
     #header{text-align:center;background-color:#d3d3d3;height:4vh;top:0;font-size:14px}
-    #divscreen{height:60vh;background-color:#444;top:4vh;border-radius:0;}
+    #divscreen{height:60vh;background-color:#000000;top:4vh;border-radius:0;}
     #screen{width:100%;height:40vh;align-self:center;margin:.5%}
     #video{display:flex;flex-direction:column;width:95%;margin:10px 5px}
     #video:hover{font-weight:bolder;border-bottom:10px solid; border-image:linear-gradient(to left, red,yellow,orange,green,purple,blue)30;border-left:0;}
@@ -123,14 +115,14 @@ body{background-color:rgb(236, 236, 236)
     ::-webkit-scrollbar-track{background-color:rgba(0,183,255,.5);border-radius:0 0 10px 10px}
     .socialButtons button{width:15em;height:5em;padding:1%;border-radius:20px;font-size:10px;border-color:#383838;background-color:#fff;color:#00f}
     .socialButtons{width:fit-content;height:fit-content;}
-    #controlon,#controloff {font-variation-settings:'FILL' 1,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: black;}
+    #controlon,#controloff {font-variation-settings:'FILL' 1,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: rgb(255, 255, 255);}
     #controloff {font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz'20;}
 }
 @media screen and (min-width:500px) and (max-width:1000px) and (max-height:500px){
     #divscreen,#playlistbox{display:flex;height:96vh}
     #screendiv{display:flex;flex-direction:row}
     #header{text-align:center;background-color:#d3d3d3;width:100%;height:4vh;position:sticky;top:0;font-size:14px}
-    #divscreen{flex-direction:column;width:80%;background-color:#444;position:sticky;top:4vh;border-radius:0;}
+    #divscreen{flex-direction:column;width:80%;background-color:#000000;position:sticky;top:4vh;border-radius:0;}
     #screen{width:70%;height:50vh;align-self:center;margin:.5%}
     #video{display:flex;flex-direction:column;width:97%;margin:3px 2px}
     #Logo img{width:70px;height:50px}
@@ -142,7 +134,7 @@ body{background-color:rgb(236, 236, 236)
     ::-webkit-scrollbar-track{background-color:rgba(255,255,255,.925);border-radius:0 10px 10px 0}
     .socialButtons button{width:15em;height:5em;padding:1%;border-radius:20px;font-size:10px;border-color:#383838;background-color:#fff;color:#00f}
     .socialButtons{width:fit-content;height:fit-content;}
-    #controlon,#controloff {font-variation-settings:'FILL' 1,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: black;}
+    #controlon,#controloff {font-variation-settings:'FILL' 1,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: rgb(255, 255, 255);}
     #controloff {font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz'20;}
 
 }
@@ -152,7 +144,7 @@ body{background-color:rgb(236, 236, 236)
     #screen,
     *{padding:0}*{margin:0}
     #header{text-align:center;background-color:#d3d3d3;height:4vh;top:0;font-size:14px}
-    #divscreen{height:65vh;background-color:#444;top:4vh;border-radius:0;}
+    #divscreen{height:65vh;background-color:#000000;top:4vh;border-radius:0;}
     #screen{width:50%;height:40vh;background-color:#000;align-self:center;margin:.5%}
     #playlistbox{display:flex;flex-direction:column;overflow-y:scroll;width:99%;align-items:center;height:30vh;border-radius: 0;}
     ::-webkit-scrollbar{width:8px;border-radius:0 0 10px 10px}
@@ -164,7 +156,7 @@ body{background-color:rgb(236, 236, 236)
     #controlscontainer{flex-direction:column;z-index:1;height:15%;align-items:center;background-color:rgba(0, 0, 0, 0.601);color:#ffffff}
     #controls{flex-direction:row;height:75%;justify-content:center;justify-items:center;align-items:center;z-index:100000000;transition:opacity 150ms ease-in-out;border-radius:0;background-color:transparent}
     #back,#forward,#fullscr,#exitfullscr,#minip,#mute,#pause,#play,#voln{width:25px;height:25px;cursor:pointer;align-content:center;align-items:center;text-align:center;vertical-align:middle;background-color:transparent;overflow:hidden;border-radius:2px;position:relative;padding:3px;margin:0 3px}
-    #back:hover,#forward:hover,#fullscr:hover,#exitfullscr:hover,#minip:hover,#mute:hover,#pause:hover,#play:hover,#voln:hover{background-color:#fff;border-radius:50%;padding:3px}
+    #back:hover,#forward:hover,#fullscr:hover,#exitfullscr:hover,#minip:hover,#mute:hover,#pause:hover,#play:hover,#voln:hover{border-radius:50%;padding:3px}
     #volval{font-size:7;color:#ffffff;border-radius:25px; vertical-align: middle;text-align: center;}
     #video:fullscreen{z-index:3}
     #progress{height:2px;width:98%;margin-left:1%;margin-right:1%}
@@ -172,7 +164,7 @@ body{background-color:rgb(236, 236, 236)
     #videoname img{width:30px;height:30px;vertical-align: middle;}
     .socialButtons button{width:15em;height:5em;padding:1%;border-radius:20px;font-size:10px;border-color:#383838;background-color:#fff;color:#00f}
     .socialButtons{width:fit-content;height:fit-content;}
-    #controlon,#controloff {font-variation-settings:'FILL' 1,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: black;}
+    #controlon,#controloff {font-variation-settings:'FILL' 1,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: rgb(255, 255, 255);}
     #controloff {font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz'20;}
 
 

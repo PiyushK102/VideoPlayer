@@ -20,12 +20,10 @@
   <div id="screendiv">    
     <div id="divscreen">
       <div id="topline">
-        <span id="videonamediv">Series Name </span><span id="screensizebox"> Screen Size → W:-Px X H:-Px</span><button><span class="material-symbols-rounded" id="controloff" title="Lock Controls ?" onclick="controldisplay('controlscontainer')"style="display:block;">lock_open_right</span>
+        <span id="videonamediv">Series Name </span><span id="screensizebox"> Screen Size → W:-Px X H:-Px</span><span class="material-symbols-rounded" id="controloff" title="Lock Controls ?" onclick="controldisplay('controlscontainer')"style="display:block;">lock_open_right</span>
         <span id="controlon" title=" Unlock Controls ?"style="display:none;"onclick="controldisplay('controlscontainer')" class="material-symbols-rounded">lock</span>
       </div>
-      <video id="screen">
-          <source id="videosource"src="https://drive.google.com/uc?id=17fX93QQMP7njPQOnDocSz2VIwqGGJq8P" type="video/mp4">
-      </video>
+      <video id="screen" src="https://drive.google.com/uc?id=17fX93QQMP7njPQOnDocSz2VIwqGGJq8P" type="video/mp4"></video>
         <div id="controlscontainer" style="display: flex;">
             <input id="progress" min="0" max="100" title="Seek" type="range" steps="any" value="0">
             <div id="controls">
