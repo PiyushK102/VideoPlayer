@@ -16,8 +16,7 @@ const totalTimeElement=document.querySelector(".totaltime");
 const seekbar=document.querySelector("#progress");
 const VideoList=document.querySelector("#playlistbox")
 const videoname=document.querySelector("#videonamediv")
-const closefscreen=document.querySelector("#exitfscreen")
-
+const closefscreen=document.querySelector("#exitfullscr")
 
 ///////////////////////////////////-----Video Name Function-------///////////////////////////////////////////////////////////////
     function changename(element){
@@ -97,23 +96,28 @@ function controldisplay(btn){
 
 ///////////////////////----Screen Modes----/////////////////////////////////////////////////////////////
 fullscrbtn.addEventListener("click",fullscreen)
-// closefscreen.addEventListener("click",fullscreen)
+closefscreen.addEventListener("click",fullscreen)
 Video.addEventListener("dblclick",fullscreen)
 function fullscreen(){
-   if(document.fullscreenElement==null)
+   if(document.fullscreenElement!=null)
    {
-        Videocontainer.requestFullscreen();
+        document.exitFullscreen()
+        closefscreen.style.display="none"
+        fullscrbtn.style.display="block"
    }
    else
    {
-        Videocontainer.exitFullscreen();
+        Videocontainer.requestFullscreen()
+        closefscreen.style.display="block"
+        fullscrbtn.style.display="none"
    }
   
 }
+
 mpbtn.addEventListener("click",pipmode)
 function pipmode() {
     if (mpbtn.pictureInPictureElement) {
-            mpbtn.exitPictureInPicture();
+            Video.exitPictureInPicture();
         }
     else if (document.pictureInPictureEnabled) {
             Video.requestPictureInPicture();
