@@ -20,7 +20,7 @@ const closefscreen=document.querySelector("#exitfullscr")
 
 ///////////////////////////////////-----Video Name Function-------///////////////////////////////////////////////////////////////
     function changename(element){
-        videoname.innerHTML=element.innerHTML
+        videoname.innerHTML=element
     }
     
     document.addEventListener("loaded",()=>{
