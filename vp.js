@@ -19,32 +19,44 @@ const videoname=document.querySelector("#videonamediv")
 const closefscreen=document.querySelector("#exitfullscr")
 
 ///////////////////////////////////-----Video Name Function-------///////////////////////////////////////////////////////////////
-    function changename(element){
-        videoname.innerHTML=element
-    }
-    
-    document.addEventListener("loaded",()=>{
-        var winwidth=window.innerWidth
-        var winheight=window.innerHeight
-        document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
-        console.log(winheight);
-        console.log(winwidth);
-    })
-    window.addEventListener("resize",()=>{
-        var winwidth=window.innerWidth
-        var winheight=window.innerHeight
-        document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
-        console.log(winheight);
-        console.log(winwidth);
-    })
-    window.addEventListener("orientationchange",()=>{
-        var winwidth=window.innerWidth
-        var winheight=window.innerHeight
-        document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
-        console.log(winheight);
-        console.log(winwidth);
-    })
-    
+///////////////////////////////////-----Video Name Function-------///////////////////////////////////////////////////////////////
+function changename(element){
+    videoname.innerHTML=element
+}
+
+document.addEventListener("loaded",()=>{
+    var winwidth=window.innerWidth
+    var winheight=window.innerHeight
+    document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
+    console.log(winheight);
+    console.log(winwidth);
+})
+Video.addEventListener("onchange",()=>{
+    var winwidth=window.innerWidth
+    var winheight=window.innerHeight
+    document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
+})
+document.addEventListener("onchange",()=>{
+    var winwidth=window.innerWidth
+    var winheight=window.innerHeight
+    document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
+    console.log(winheight);
+    console.log(winwidth);
+})
+window.addEventListener("resize",()=>{
+    var winwidth=window.innerWidth
+    var winheight=window.innerHeight
+    document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
+    console.log(winheight);
+    console.log(winwidth);
+})
+window.addEventListener("orientationchange",()=>{
+    var winwidth=window.innerWidth
+    var winheight=window.innerHeight
+    document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
+    console.log(winheight);
+    console.log(winwidth);
+})
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////-----Change Video Source---------//////////////////////////////////
@@ -55,7 +67,6 @@ function changevideo(e){
     togglePlayPause();
    
 }
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////----Play Pause operation----///////////////////////////////////////
 
@@ -94,7 +105,9 @@ function controldisplay(btn){
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-///////////////////////----Screen Modes----/////////////////////////////////////////////////////////////
+///////////////////////////////////////----Screen Modes----/////////////////////////////////////////////////////////////
+
+///////////////////////////////////------FullScreen Button--------/////////////////////////////////////
 fullscrbtn.addEventListener("click",fullscreen)
 closefscreen.addEventListener("click",fullscreen)
 Video.addEventListener("dblclick",fullscreen)
@@ -111,9 +124,9 @@ function fullscreen(){
         closefscreen.style.display="block"
         fullscrbtn.style.display="none"
    }
-  
 }
 
+///////////////////////////////////------MiniPlayer Button--------/////////////////////////////////////
 mpbtn.addEventListener("click",pipmode)
 function pipmode() {
     if (document.pictureInPictureElement) {
@@ -168,6 +181,25 @@ function volpm(vvalue){
     volval.innerHTML=(vol.value)
 }
 //////////////////////////////////////////////////////////////////////////////////
+/////////////////--------ProgressBar-----------///////////////////////////////////
+
+Video.addEventListener("loadeddata",()=>{
+    seekbar.setAttribute("max",(Video.duration));
+    
+})
+Video.addEventListener("timeupdate",()=>{
+    seekbar.value=(Video.currentTime)
+    if(Video.currentTime==Video.duration)
+    {
+        togglePlayPause()
+    }
+})
+    
+seekbar.addEventListener("input",e => {
+    Video.currentTime=(e.target.value);
+    
+})
+/////////////////////////////////////////////////////////////////////////////////
 /////////////////--------ProgressBar-----------///////////////////////////////////
 
 Video.addEventListener("loadeddata",()=>{

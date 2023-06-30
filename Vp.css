@@ -10,7 +10,7 @@
 color:red;
 }
 .navButtons button,.socialButtons button{word-wrap:break-word;font-family:DynaPuff,cursive}
-*{padding:0;transition:all ease-in-out 0.5s; user-select: none; -moz-user-select: none;}
+*{padding:0;transition:all ease-in-out 0.2s; user-select: none; -moz-user-select: none;-webkit-user-select: none;}
 #divscreen,.navigation,.socialButtons{height:fit-content}
 hr{background-color:#ffd0d0}#screen,#volval{align-self:center}
 #videoname,#volumectrl,#volval,.VZ img{vertical-align:middle}
@@ -24,13 +24,13 @@ hr{background-color:#ffd0d0}#screen,#volval{align-self:center}
 #volumectrl:hover{box-shadow:0px 0px 2px 2px rgba(128,128,128,.699)}
 hr{height:.2em;border-radius:20px}.VZ{margin:.25% 25%;width:50%}
 #timer,#volumectrl,.navigation{align-content:center;width:fit-content}
-.navigation{position:fixed;display:flex;flex-direction:column;align-items:center;top:0;left:0;z-index:200}
+.navigation{position:fixed;display:flex;flex-direction:column;align-items:center;top:0;left:0;z-index:200;}
 #divscreen,.ham{flex-direction:column}
 .socialButtons img,.navigation img{border-radius:50%;border:2px solid #515151}
 .VZ img{border-radius:50%;border:2px solid #000}
 .ham:hover+.navButtons{display:inline-block}
 .navButtons button{ display:flex;flex-direction:row;width:15em;height:5em;overflow:hidden;padding:.5em;border-radius:10px;font-size:12px;border-color:#848484;background-color:#fff;transition:width .1s,height .1s,background-color .5s,border-color .1s;color:#00f;align-items: center;}
-.navButtons{background-color:rgba(39,39,39,.87);border-radius:10px;padding:2%}
+.navButtons{background-color:rgba(39,39,39,.87);border-radius:10px;padding:2%;box-shadow: 0 0 3px 3px rgba(128, 128, 128, 0.622);}
 .socialButtons,.socialButtons:hover{position:absolute;background-color:rgba(255,255,255,.818);text-align:center}
 .navButtons button:hover{background-color:#002ca5;border-color:#fff;border-width:.8mm;color:#fff;cursor:pointer}
 .navButtons button:active{transform:translateY(2px)}
@@ -66,12 +66,12 @@ body{background-color:rgb(236, 236, 236)
 #divscreen{width:65%;background-color:#000000;overflow:hidden;height:85vh;padding:0.5%;border-radius: 10px 0 0 10px;justify-content: center;}
 #controls .material-symbols-rounded{font-variation-settings:'FILL' 0,'wght' 700,'GRAD' 0,'opsz' 35;}
 #screen{width:100%;height:65vh;margin:8px;}
-#playlistbox{flex-direction:column;width:33%;height:85vh;background-color:#000000;padding:0.5%;overflow-y:scroll;border-radius: 0 10px 10px 0;}
+#playlistbox{flex-direction:column;width:33%;height:85vh;background-color:transparent;padding:0.5%;overflow-y:scroll;border-radius: 0 10px 10px 0;}
 #video{flex-direction:row;padding:.5%;align-items:center;align-content:center;justify-content:space-around;cursor:pointer;background-color:azure;margin:10px 5px}
-#video:hover{font-weight:bolder;border-left:10px solid; border-image:linear-gradient( red,yellow,orange,green,purple,blue)2;}
+#video:hover{border:2px solid; border-color:red;background-color: rgba(255, 125, 140, 0.538);border-radius: 10px;}
 #Logo img{width:250px;height:200px;border-radius:10px;flex-shrink:inherit}
 #videoname{flex-shrink:inherit}
-#controlscontainer{display:flex;flex-direction:column;background-color:#000000;padding:1%;position:relative;bottom:0px;margin:0 0 0 0;align-content: space-around;}
+#controlscontainer{display:flex;flex-direction:column;background-color:#3030309a;padding:1%;position:relative;bottom:0px;margin:0 0 0 0;align-content: space-around;}
 #controls{display:flex;flex-direction:row;background-color:#00000065;border-radius:20px;justify-content:space-around;flex-wrap: wrap;}
 ::-webkit-scrollbar{width:10px;border-radius:0 10px 10px 0}
 ::-webkit-scrollbar-thumb{background-color:#00f;border-radius:10px}
@@ -105,7 +105,7 @@ body{background-color:rgb(236, 236, 236)
     #divscreen{height:60vh;background-color:#000000;top:4vh;border-radius:0;}
     #screen{width:100%;height:40vh;align-self:center;margin:.5%}
     #video{display:flex;flex-direction:column;width:95%;margin:10px 5px}
-    #video:hover{font-weight:bolder;border-bottom:10px solid; border-image:linear-gradient(to left, red,yellow,orange,green,purple,blue)30;border-left:0;}
+    #video:hover{border:2px solid; border-color:red;background-color: rgba(255, 125, 140, 0.538);border-radius: 10px;}
     #Logo img{width:150px;height:120px}
     #videoname{padding:1%;vertical-align:middle;flex-shrink:inherit;}
     #videoname img{width:30px;height:30px;vertical-align: middle;}
