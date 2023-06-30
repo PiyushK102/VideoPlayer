@@ -116,10 +116,10 @@ function fullscreen(){
 
 mpbtn.addEventListener("click",pipmode)
 function pipmode() {
-    if (mpbtn.pictureInPictureElement) {
-            Video.exitPictureInPicture();
+    if (document.pictureInPictureElement) {
+            document.exitPictureInPicture();
         }
-    else if (document.pictureInPictureEnabled) {
+    else {
             Video.requestPictureInPicture();
         }
 }
