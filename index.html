@@ -12,24 +12,25 @@
     <script src="vp.js" defer></script>
     <!-- <script src="Videoplay.js" defer></script> -->
 </head>
-<body>
+<body  oncontextmenu="return false">
   <div class="VZ">
-    <h1 style="background-image:linear-gradient(to right,rgb(237, 174, 174),rgb(255, 104, 104),rgb(255, 32, 32),rgb(255, 104, 104),rgb(237, 174, 174));color:aliceblue;text-align:center;border-radius: 30px;padding:3px;font-size:large;"><img src="images/Vz.jpg">Video Zone</h1> 
+    <h1 style="background-image:linear-gradient(to right,rgb(237, 174, 174),rgb(255, 104, 104),rgb(255, 32, 32),rgb(255, 104, 104),rgb(237, 174, 174));color:aliceblue;text-align:center;border-radius: 30px;padding:3px;font-size:large;"><img title="Double Click To Play" src="images/Vz.jpg">Video Zone</h1> 
   </div>
   <hr><br>
   <div id="screendiv">    
     <div id="divscreen">
       <div id="topline">
-        <span id="videonamediv">Series Name </span><span id="screensizebox"> Screen Size → W:-Px X H:-Px</span><span class="material-symbols-rounded" id="controloff" title="Lock Controls ?" onclick="controldisplay('controlscontainer')"style="display:block;">lock_open_right</span>
-        <span id="controlon" title=" Unlock Controls ?"style="display:none;"onclick="controldisplay('controlscontainer')" class="material-symbols-rounded">lock</span>
+        <span id="videonamediv">Idaten Jump Ep01. </span><span id="screensizebox"> Screen Size → W:-Px X H:-Px</span><span class="material-symbols-rounded" id="controloff" title="Hide Controls ?" onclick="controldisplay('controlscontainer')"style="display:block;">lock_open_right</span>
       </div>
-      <video id="screen" src="https://drive.google.com/uc?id=17fX93QQMP7njPQOnDocSz2VIwqGGJq8P" type="video/mp4"></video>
+      <span id="controlon" title=" Unhide Controls ?"style="display:none;"onclick="controldisplay('controlscontainer')" class="material-symbols-rounded">lock</span>
+      <video id="screen" src="https://drive.google.com/uc?id=17fX93QQMP7njPQOnDocSz2VIwqGGJq8P" type="video/mp4">
+      </video>
         <div id="controlscontainer" style="display: flex;">
             <input id="progress" min="0" max="100" title="Seek" type="range" steps="any" value="0">
             <div id="controls">
                 <div id="timer">
                     <div class="currtime">0:00</div>
-                    <div>/</div>
+                    <div>&ensp;/&ensp;</div>
                     <div class="totaltime">00:00</div>
                 </div>
                 <div id="back" title="Seek Backward"><span class="material-symbols-rounded">fast_rewind</span></div>
@@ -52,7 +53,7 @@
         <div id="video" title="Double Click To Play"ondblclick="changevideo('https://drive.google.com/uc?id=17fX93QQMP7njPQOnDocSz2VIwqGGJq8P')" onclick="changename('Idaten Jump Ep01.')"><div id="Logo"><img title="Double Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 01 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
         <div id="video" title="Double Click To Play"ondblclick="changevideo('https://drive.google.com/uc?id=1LpdgyJtOFF5Zq3sFD_Yh4rYKMyDdZ2xb')" onclick="changename('Idaten Jump Ep02.')"><div id="Logo"><img title="Double Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 02 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
         <div id="video" title="Double Click To Play"ondblclick="changevideo('https://drive.google.com/uc?id=1TwIGcS3vvm5MdcJZX16FSysqMiQM6kZU')" onclick="changename('Idaten Jump Ep03.')"><div id="Logo"><img title="Double Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 03 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
-        <div id="video" title="Double Click To Play"ondblclick="changevideo('https://drive.google.com/uc?id=1SN4HrGyn4Rx7WLSH6e83dNX7ka7Sp0pX')" onclick="changename('Idaten Jump Ep04.')"><div id="Logo"><img title="Double Click To Play"id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 04 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
+        <div id="video" title="Double Click To Play"ondblclick="changevideo('https://drive.google.com/uc?id=1SN4HrGyn4Rx7WLSH6e83dNX7ka7Sp0pX')" onclick="changename('Idaten Jump Ep04.')"><div id="Logo"><img  title="Double Click To Play"id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 04 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
         <div id="video" title="Double Click To Play"ondblclick="changevideo('https://drive.google.com/uc?id=1RLSKfBnV1SX9iva5cTBljS2ZFB76FhCT')" onclick="changename('Idaten Jump Ep05.')"><div id="Logo"><img title="Double Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 05 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
         <div id="video" title="Double Click To Play"ondblclick="changevideo('https://drive.google.com/uc?id=13RPdfA_qL4JXfD3C7utwh7-Bg0ZV3koY')" onclick="changename('Idaten Jump Ep06.')"><div id="Logo"><img title="Double Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 06 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
         <div id="video" title="Double Click To Play"ondblclick="changevideo('https://drive.google.com/uc?id=19SU13CrgwAM-6_XJYVrpFC8CmPB7UXJ-')" onclick="changename('Idaten Jump Ep07.')"><div id="Logo"><img title="Double Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 07 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
