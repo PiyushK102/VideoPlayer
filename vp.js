@@ -111,6 +111,16 @@ function controldisplay(btn){
 fullscrbtn.addEventListener("click",fullscreen)
 closefscreen.addEventListener("click",fullscreen)
 Video.addEventListener("dblclick",fullscreen)
+document.addEventListener("fullscreenchange",()=>{
+    if(document.fullscreenElement==null || document.fullscreenEnabled==false){
+        closefscreen.style.display="none"
+        fullscrbtn.style.display="block"
+    }
+    else{
+        closefscreen.style.display="block"
+        fullscrbtn.style.display="none"
+    }
+})
 function fullscreen(){
    if(document.fullscreenElement!=null)
    {
