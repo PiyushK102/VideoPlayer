@@ -92,14 +92,14 @@ function togglePlayPause(){
 function controldisplay(btn){
     if (document.getElementById(btn).style.display == "none") {
         document.getElementById(btn).style.display = "flex";
-        document.getElementById("controloff").style.display="block"
+        document.getElementById("topline").style.display="flex"
         document.getElementById("controlon").style.display="none"
         Video.style.height="65vh"
         } 
     else {
         document.getElementById(btn).style.display = "none";
         document.getElementById("controlon").style.display="block"
-        document.getElementById("controloff").style.display="none"
+        document.getElementById("topline").style.display="none"
         Video.style.height="75vh" 
     } 
 }
