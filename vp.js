@@ -19,44 +19,62 @@ const videoname=document.querySelector("#videonamediv")
 const closefscreen=document.querySelector("#exitfullscr")
 
 ///////////////////////////////////-----Video Name Function-------///////////////////////////////////////////////////////////////
-///////////////////////////////////-----Video Name Function-------///////////////////////////////////////////////////////////////
-function changename(element){
-    videoname.innerHTML=element
+//////////////////////////////////////-------PlaylistBox Display-------/////////////////////////////////
+function display(element) {
+    if (document.getElementById(element).style.display == "none") {
+        document.getElementById(element).style.display = "block";
+        
+        } 
+    else {
+        document.getElementById(element).style.display = "none";
+    }
 }
-
-document.addEventListener("loaded",()=>{
-    var winwidth=window.innerWidth
-    var winheight=window.innerHeight
-    document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
-    console.log(winheight);
-    console.log(winwidth);
-})
-Video.addEventListener("onchange",()=>{
-    var winwidth=window.innerWidth
-    var winheight=window.innerHeight
-    document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
-})
-document.addEventListener("onchange",()=>{
-    var winwidth=window.innerWidth
-    var winheight=window.innerHeight
-    document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
-    console.log(winheight);
-    console.log(winwidth);
-})
-window.addEventListener("resize",()=>{
-    var winwidth=window.innerWidth
-    var winheight=window.innerHeight
-    document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
-    console.log(winheight);
-    console.log(winwidth);
-})
-window.addEventListener("orientationchange",()=>{
-    var winwidth=window.innerWidth
-    var winheight=window.innerHeight
-    document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
-    console.log(winheight);
-    console.log(winwidth);
-})
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////-----Video Name Function-------///////////////////////////////////////////////////////////////
+    function changename(element){
+        videoname.innerHTML=element
+    }
+    // Videocontainer.addEventListener("onmouseover",()=>{
+    //     document.querySelector("#topline").setAttribute("top",0)
+    // })
+    document.addEventListener("loaded",()=>{
+        var winwidth=window.innerWidth
+        var winheight=window.innerHeight
+        document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
+        console.log(winheight);
+        console.log(winwidth);
+    })
+    Video.addEventListener("onchange",()=>{
+        var winwidth=window.innerWidth
+        var winheight=window.innerHeight
+        document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
+    })
+    document.addEventListener("onchange",()=>{
+        var winwidth=window.innerWidth
+        var winheight=window.innerHeight
+        document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
+        console.log(winheight);
+        console.log(winwidth);
+    })
+    window.addEventListener("resize",()=>{
+        var winwidth=window.innerWidth
+        var winheight=window.innerHeight
+        document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
+        console.log(winheight);
+        console.log(winwidth);
+    })
+    window.addEventListener("orientationchange",()=>{
+        var winwidth=window.innerWidth
+        var winheight=window.innerHeight
+        document.querySelector("#screensizebox").innerHTML=" Screen Size → W:"+winwidth+"Px X "+"H:"+winheight+"Px";
+        console.log(winheight);
+        console.log(winwidth);
+    })
+    
+    
+    
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////-----Change Video Source---------//////////////////////////////////
@@ -67,6 +85,7 @@ function changevideo(e){
     togglePlayPause();
    
 }
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////----Play Pause operation----///////////////////////////////////////
 
@@ -90,17 +109,15 @@ function togglePlayPause(){
     }   
 }
 function controldisplay(btn){
-    if (document.getElementById(btn).style.display == "none") {
-        document.getElementById(btn).style.display = "flex";
-        document.getElementById("topline").style.display="flex"
+    if (document.getElementById(btn).style.opacity ==0) {
+        document.getElementById(btn).style.opacity = 1;
+        document.getElementById("topline").style.opacity=1
         document.getElementById("controlon").style.display="none"
-        Video.style.height="65vh"
         } 
     else {
-        document.getElementById(btn).style.display = "none";
+        document.getElementById(btn).style.opacity = 0;
         document.getElementById("controlon").style.display="block"
-        document.getElementById("topline").style.display="none"
-        Video.style.height="75vh" 
+        document.getElementById("topline").style.opacity=0
     } 
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -122,7 +139,7 @@ document.addEventListener("fullscreenchange",()=>{
     }
 })
 function fullscreen(){
-   if(document.fullscreenElement!=null)
+   if(document.fullscreenElement!=null || document.fullscreenEnabled==false)
    {
         document.exitFullscreen()
         closefscreen.style.display="none"
@@ -135,7 +152,6 @@ function fullscreen(){
         fullscrbtn.style.display="none"
    }
 }
-
 ///////////////////////////////////------MiniPlayer Button--------/////////////////////////////////////
 mpbtn.addEventListener("click",pipmode)
 function pipmode() {
@@ -210,25 +226,6 @@ seekbar.addEventListener("input",e => {
     
 })
 /////////////////////////////////////////////////////////////////////////////////
-/////////////////--------ProgressBar-----------///////////////////////////////////
-
-Video.addEventListener("loadeddata",()=>{
-    seekbar.setAttribute("max",(Video.duration));
-    
-})
-Video.addEventListener("timeupdate",()=>{
-    seekbar.value=(Video.currentTime)
-    if(Video.currentTime==Video.duration)
-    {
-        togglePlayPause()
-    }
-})
-    
-seekbar.addEventListener("input",e => {
-    Video.currentTime=(e.target.value);
-    
-})
-/////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////--------Duration-----------/////////////////////////
 
 Video.addEventListener("loadeddata",()=>{
@@ -264,6 +261,7 @@ function skip(duration){
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////
+
 document.addEventListener("keydown", e =>{
     switch(e.key.toLowerCase()){
         case " ":
@@ -303,5 +301,4 @@ document.addEventListener("keydown", e =>{
             break;         
     }   
 })
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////
