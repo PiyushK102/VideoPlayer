@@ -22,7 +22,7 @@ const closefscreen=document.querySelector("#exitfullscr")
 //////////////////////////////////////-------PlaylistBox Display-------/////////////////////////////////
 function display(element) {
     if (document.getElementById(element).style.display == "none") {
-        document.getElementById(element).style.display = "block";
+        document.getElementById(element).style.display = "flex";
         
         } 
     else {
@@ -98,13 +98,13 @@ function togglePlayPause(){
     if(Video.paused==true)
     {
         Video.play()
-        pausebtn.style.display="block"
+        pausebtn.style.display="flex"
         playbtn.style.display="none"
 
     }
     else{
         Video.pause()
-        playbtn.style.display="block"
+        playbtn.style.display="flex"
         pausebtn.style.display="none"
     }   
 }
@@ -116,7 +116,7 @@ function controldisplay(btn){
         } 
     else {
         document.getElementById(btn).style.opacity = 0;
-        document.getElementById("controlon").style.display="block"
+        document.getElementById("controlon").style.display="flex"
         document.getElementById("topline").style.opacity=0
     } 
 }
@@ -131,10 +131,10 @@ Video.addEventListener("dblclick",fullscreen)
 document.addEventListener("fullscreenchange",()=>{
     if(document.fullscreenElement==null || document.fullscreenEnabled==false){
         closefscreen.style.display="none"
-        fullscrbtn.style.display="block"
+        fullscrbtn.style.display="flex"
     }
     else{
-        closefscreen.style.display="block"
+        closefscreen.style.display="flex"
         fullscrbtn.style.display="none"
     }
 })
@@ -143,12 +143,12 @@ function fullscreen(){
    {
         document.exitFullscreen()
         closefscreen.style.display="none"
-        fullscrbtn.style.display="block"
+        fullscrbtn.style.display="flex"
    }
    else
    {
         Videocontainer.requestFullscreen()
-        closefscreen.style.display="block"
+        closefscreen.style.display="flex"
         fullscrbtn.style.display="none"
    }
 }
@@ -172,14 +172,14 @@ vol.addEventListener("input",e =>{
     Video.muted=e.target.value===0
     volval.innerHTML=Math.round((Video.volume)*100)
     if(vol.value==0){
-        mute.style.display="block"
+        mute.style.display="flex"
         volvalue.style.display="none"
         volval.innerHTML="Muted"
 
     }
     else{
         mute.style.display="none"
-        volvalue.style.display="block"
+        volvalue.style.display="flex"
         volval.innerHTML=Math.round((Video.volume)*100);
    }
 })
@@ -188,14 +188,14 @@ function toggleMute()
    Video.muted=!Video.muted
    if(Video.muted==true || Video.volume==0)
    {
-        mute.style.display="block"
+        mute.style.display="flex"
         volvalue.style.display="none"
         vol.value="0"
         volval.innerHTML="Muted"
    }
    else{
         mute.style.display="none"
-        volvalue.style.display="block"
+        volvalue.style.display="flex"
         volval.innerHTML=Math.round((Video.volume)*100)
         vol.value=Math.round((Video.volume)*100)
    }
