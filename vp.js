@@ -14,15 +14,35 @@ const mute=document.querySelector("#mute");
 const currentTimeElement=document.querySelector(".currtime");
 const totalTimeElement=document.querySelector(".totaltime");
 const seekbar=document.querySelector("#progress");
+const playlistbutton=document.querySelector("#playlistbutton")
 const VideoList=document.querySelector("#playlistbox")
 const videoname=document.querySelector("#videonamediv")
+const ham=document.querySelector(".ham")
+const nav=document.querySelector(".navButtons")
+const hamsym=document.querySelector("#hamsym")
+const closebtn=document.querySelector("#close")
 const closefscreen=document.querySelector("#exitfullscr")
+const Social=document.querySelector(".Social")
 
-///////////////////////////////////-----Video Name Function-------///////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Social.addEventListener("click",()=>{
+    if(document.querySelector("#socialButtons").style.display=="none"){
+        document.querySelector("#socialButtons").style.display="block"
+        document.querySelector("#uparrow").style.display="block"
+        document.querySelector("#downarrow").style.display="none" 
+    }
+    else{
+        document.querySelector("#socialButtons").style.display="none"
+        document.querySelector("#uparrow").style.display="none"
+        document.querySelector("#downarrow").style.display="block" 
+    }
+})
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////-------PlaylistBox Display-------/////////////////////////////////
 function display(element) {
     if (document.getElementById(element).style.display == "none") {
-        document.getElementById(element).style.display = "flex";
+        document.getElementById(element).style.display = "block";
         
         } 
     else {
@@ -75,6 +95,18 @@ function display(element) {
     
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+ham.addEventListener("click",()=>{
+    if(nav.style.display=="block"){
+        hamsym.style.display="none"
+        closebtn.style.display="block"
+    }
+    else{
+        hamsym.style.display="block"
+        closebtn.style.display="none"
+    }
+})
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////-----Change Video Source---------//////////////////////////////////
@@ -113,11 +145,13 @@ function controldisplay(btn){
         document.getElementById(btn).style.opacity = 1;
         document.getElementById("topline").style.opacity=1
         document.getElementById("controlon").style.display="none"
+        document.getElementById("controloff").style.display="flex"
         } 
     else {
         document.getElementById(btn).style.opacity = 0;
         document.getElementById("controlon").style.display="flex"
         document.getElementById("topline").style.opacity=0
+        document.getElementById("controloff").style.display="none"
     } 
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -139,19 +173,19 @@ document.addEventListener("fullscreenchange",()=>{
     }
 })
 function fullscreen(){
-   if(document.fullscreenElement!=null || document.fullscreenEnabled==false)
-   {
-        document.exitFullscreen()
-        closefscreen.style.display="none"
-        fullscrbtn.style.display="flex"
-   }
-   else
-   {
-        Videocontainer.requestFullscreen()
-        closefscreen.style.display="flex"
-        fullscrbtn.style.display="none"
-   }
-}
+    if(document.fullscreenElement!=null || document.fullscreenEnabled==false)
+    {
+         document.exitFullscreen()
+         closefscreen.style.display="none"
+         fullscrbtn.style.display="flex"
+    }
+    else
+    {
+         Videocontainer.requestFullscreen()
+         closefscreen.style.display="flex"
+         fullscrbtn.style.display="none"
+    }
+ }
 ///////////////////////////////////------MiniPlayer Button--------/////////////////////////////////////
 mpbtn.addEventListener("click",pipmode)
 function pipmode() {
@@ -254,7 +288,7 @@ function formatDuration(time){
     }
 }
 forward.addEventListener("click",()=>{skip(10)})
-back.addEventListener("click",()=>{skip(-5)})
+back.addEventListener("click",()=>{skip(-10)})
 function skip(duration){
     
     Video.currentTime+=duration
@@ -274,7 +308,7 @@ document.addEventListener("keydown", e =>{
             break 
         case "arrowleft":
             case "j":
-                skip(-5)
+                skip(-10)
                 break
         
         case "arrowright":
