@@ -14,7 +14,7 @@
 </head>
 <body  oncontextmenu="return false">
    
-  <div class="VZ">
+    <div class="VZ">
     <h1 style="background-image:linear-gradient(to right,rgb(237, 174, 174),rgb(255, 104, 104),rgb(255, 32, 32),rgb(255, 104, 104),rgb(237, 174, 174));color:aliceblue;text-align:center;border-radius: 30px;padding:3px;font-size:large;"><img title=" Click To Play" src="images/Vz.jpg">Video Zone</h1> 
   </div>
   <hr><br>
@@ -22,27 +22,28 @@
     <div id="divscreen">
       <div id="toplinecontainer">
       <div id="topline" style="display:flex;opacity:1;">
-        <span id="videonamediv">Idaten Jump Ep01. </span><span id="screensizebox"> Screen Size → W:-Px X H:-Px</span>
+        <span id="videonamediv"> </span><span id="screensizebox"> Screen Size → W:-Px X H:-Px</span>
       </div>
       <span class="material-symbols-rounded" id="controloff" title="Hide Controls ?" onclick="controldisplay('controlscontainer')"style="display:flex;">lock_open_right</span>
       <span id="controlon" title=" Unhide Controls ?"style="display:none;"onclick="controldisplay('controlscontainer')" class="material-symbols-rounded">lock</span>
 
       </div>
             
-      <video id="screen" src="https://drive.google.com/uc?id=17fX93QQMP7njPQOnDocSz2VIwqGGJq8P" type="video/mp4">
+      <video id="screen" src="" type="video/mp4">
       </video>
       <div id="controlscontainer" style="display: flex;opacity:1;">
-        <input id="progress" min="0" max="100" title="Seek" type="range" steps="any" value="0">
-        <div id="controls">
-            <div id="timer">
+        <div id="timer">
+          <input id="progress" min="0" max="100" title="Seek" type="range" steps="any" value="0">
                 <div class="currtime">0:00</div>
                 <div>&ensp;/&ensp;</div>
                 <div class="totaltime">00:00</div>
-            </div>
-            <div id="back" title="Seek Backward"><span class="material-symbols-rounded">fast_rewind</span></div>
+        </div>
+        <div id="controls">
+            
+            <div id="back" title="Seek Backward"><span class="material-symbols-rounded">fast_rewind</span>10</div>
             <div id="play" style="display:flex;" title="Play"><strong><span class="material-symbols-rounded">play_arrow</span></strong></div>
             <div id="pause" style="display:none;" title="Pause"><span class="material-symbols-rounded">pause</span></div>
-            <div id="forward" title="Seek Forward"><span class="material-symbols-rounded">fast_forward</span></div>    
+            <div id="forward" title="Seek Forward">10<span class="material-symbols-rounded">fast_forward</span></div>    
             <div id="minip" style="display:flex;" title="Click to go in Picture in Picture Mode"><span class="material-symbols-rounded">pip</span></div>
             <div id="fullscr" style="display:flex;"title="Click to enter Fullscreen Mode"><span id="enterfullscr" class="material-symbols-rounded">fullscreen</span></div>
             <div id="exitfullscr" style="display:none;"title="Click for exiting Fullscreen Mode"><span class="material-symbols-rounded">fullscreen_exit</span></div>
@@ -56,7 +57,10 @@
     </div>
       </div>
       <div id="playlistbox">
-        <div id="video" title=" Click To Play"onmousedown="changevideo('https://drive.google.com/uc?id=17fX93QQMP7njPQOnDocSz2VIwqGGJq8P')" onclick="changename('Idaten Jump Ep01.')"><div id="Logo"><img title=" Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 01 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
+        <div id="video" title=" Click To Play"onmousedown="changevideo('VideoZoneImages/Genius_2018_Hindi_Full_Movie_Proper_HDRip_(FilmyZilla.cc).mp4')" onclick="changename('Genius')"><div id="Logo"><img title=" Click To Play"id ="emoji"src="https://upload.wikimedia.org/wikipedia/en/e/ee/Genius_official_poster.jpg" loading="lazy"></div><div id="videoname"> Genius <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
+        <div id="video" title=" Click To Play"onmousedown="changevideo('VideoZoneImages/Avatar.mp4')" onclick="changename('Avtar')"><div id="Logo"><img title=" Click To Play" id ="emoji"src="https://images.moviesanywhere.com/7fbdd5c310d10623af2d040a726c4447/850a4464-275c-458f-a26a-fa6fdd4ab18c.jpg"></div><div id="videoname"> Avtar <img title=" Click To Play" loading="lazy" src="images/Vz.jpg" alt=""loading="lazy"></div></div>
+        <div id="video" title=" Click To Play"onmousedown="changevideo('VideoZoneImages/Dhoom Machale.mp4')" onclick="changename('Dhoom Machale')"><div id="Logo"><img title=" Click To Play" id ="emoji"src="https://i.ytimg.com/vi/vKn3mafhS28/maxresdefault.jpg"></div><div id="videoname"> Dhoom Machale <img title=" Click To Play" loading="lazy" src="images/Vz.jpg" alt=""loading="lazy"></div></div>
+        <div id="video" title=" Click To Play"onmousedown="changevideo('V:\IdatenJump\Jump Episode 01 in Hindi - This Is An MTB Battle!.mp4')" onclick="changename('Idaten Jump Ep01.')"><div id="Logo"><img title=" Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 01 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
         <div id="video" title=" Click To Play"onmousedown="changevideo('https://drive.google.com/uc?id=1LpdgyJtOFF5Zq3sFD_Yh4rYKMyDdZ2xb')" onclick="changename('Idaten Jump Ep02.')"><div id="Logo"><img title=" Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 02 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
         <div id="video" title=" Click To Play"onmousedown="changevideo('https://drive.google.com/uc?id=1TwIGcS3vvm5MdcJZX16FSysqMiQM6kZU')" onclick="changename('Idaten Jump Ep03.')"><div id="Logo"><img title=" Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 03 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
         <div id="video" title=" Click To Play"onmousedown="changevideo('https://drive.google.com/uc?id=1SN4HrGyn4Rx7WLSH6e83dNX7ka7Sp0pX')" onclick="changename('Idaten Jump Ep04.')"><div id="Logo"><img  title=" Click To Play"id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 04 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
@@ -108,9 +112,7 @@
         <div id="video" title=" Click To Play"onmousedown="changevideo('https://drive.google.com/uc?id=1kHnAfwTFt_P5tzF9evaD78GBT0_7xwZ6')" onclick="changename('Idaten Jump Ep50.')"><div id="Logo"><img title=" Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 50 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
         <div id="video" title=" Click To Play"onmousedown="changevideo('https://drive.google.com/uc?id=1IVk9gOaiMWZZ8czUKcYofw7kp5Rz9UxV')" onclick="changename('Idaten Jump Ep51.')"><div id="Logo"><img title=" Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 51 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
         <div id="video" title=" Click To Play"onmousedown="changevideo('https://drive.google.com/uc?id=18u2LAx40rUVEBUuUGUJAf6fN_ZT3YTbR')" onclick="changename('Idaten Jump Ep52.')"><div id="Logo"><img title=" Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Idaten Jump Ep. 52 <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
-        <div id="video" title=" Click To Play"onmousedown="changevideo('VideoZoneImages/Genius_2018_Hindi_Full_Movie_Proper_HDRip_(FilmyZilla.cc).mp4')" onclick="changename('Genius')"><div id="Logo"><img title=" Click To Play"id ="emoji"src="images/IdatenJumpthumb.jpg" loading="lazy"></div><div id="videoname"> Genius <img src="images/Vz.jpg" alt=""loading="lazy"></div></div>
-        <div id="video" title=" Click To Play"onmousedown="changevideo('VideoZoneImages/Avatar.mp4')" onclick="changename('Avtar')"><div id="Logo"><img title=" Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg"></div><div id="videoname"> Avtar <img title=" Click To Play" loading="lazy" src="images/Vz.jpg" alt=""loading="lazy"></div></div>
-        <div id="video" title=" Click To Play"onmousedown="changevideo('VideoZoneImages/Dhoom Machale.mp4')" onclick="changename('Dhoom Machale')"><div id="Logo"><img title=" Click To Play" id ="emoji"src="images/IdatenJumpthumb.jpg"></div><div id="videoname"> Dhoom Machale <img title=" Click To Play" loading="lazy" src="images/Vz.jpg" alt=""loading="lazy"></div></div>
+        
     </div> 
   </div>
 </body>
