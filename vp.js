@@ -26,18 +26,18 @@ const Social=document.querySelector(".Social")
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Social.addEventListener("click",()=>{
-    if(document.querySelector("#socialButtons").style.display=="none"){
-        document.querySelector("#socialButtons").style.display="block"
-        document.querySelector("#uparrow").style.display="block"
-        document.querySelector("#downarrow").style.display="none" 
-    }
-    else{
-        document.querySelector("#socialButtons").style.display="none"
-        document.querySelector("#uparrow").style.display="none"
-        document.querySelector("#downarrow").style.display="block" 
-    }
-})
+// Social.addEventListener("click",()=>{
+//     if(document.querySelector("#socialButtons").style.display=="none"){
+//         document.querySelector("#socialButtons").style.display="block"
+//         document.querySelector("#uparrow").style.display="block"
+//         document.querySelector("#downarrow").style.display="none" 
+//     }
+//     else{
+//         document.querySelector("#socialButtons").style.display="none"
+//         document.querySelector("#uparrow").style.display="none"
+//         document.querySelector("#downarrow").style.display="block" 
+//     }
+// })
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////-------PlaylistBox Display-------/////////////////////////////////
 function display(element) {
@@ -95,16 +95,16 @@ function display(element) {
     
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-ham.addEventListener("click",()=>{
-    if(nav.style.display=="block"){
-        hamsym.style.display="none"
-        closebtn.style.display="block"
-    }
-    else{
-        hamsym.style.display="block"
-        closebtn.style.display="none"
-    }
-})
+// ham.addEventListener("click",()=>{
+//     if(nav.style.display=="block"){
+//         hamsym.style.display="none"
+//         closebtn.style.display="block"
+//     }
+//     else{
+//         hamsym.style.display="block"
+//         closebtn.style.display="none"
+//     }
+// })
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
