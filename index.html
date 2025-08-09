@@ -14,7 +14,7 @@
 </head>
 <body  oncontextmenu="return false">
    
-    <div class="VZ">
+     <div class="VZ">
     <h1 style="background-image:linear-gradient(to right,rgb(237, 174, 174),rgb(255, 104, 104),rgb(255, 32, 32),rgb(255, 104, 104),rgb(237, 174, 174));color:aliceblue;text-align:center;border-radius: 30px;padding:3px;font-size:large;"><img title=" Click To Play" src="images/Vz.jpg">Video Zone</h1> 
   </div>
   <hr><br>
@@ -25,7 +25,7 @@
         <span id="videonamediv"> </span><span id="screensizebox"> Screen Size → W:-Px X H:-Px</span>
       </div>
       <span class="material-symbols-rounded" id="controloff" title="Hide Controls ?" onclick="controldisplay('controlscontainer')"style="display:flex;">lock_open_right</span>
-      <span id="controlon" title=" Unhide Controls ?"style="display:none;"onclick="controldisplay('controlscontainer')" class="material-symbols-rounded">lock</span>
+      <!-- <span id="controlon" title=" Unhide Controls ?"style="display:none;"onclick="controldisplay('controlscontainer')" class="material-symbols-rounded">lock</span> -->
 
       </div>
             
@@ -33,25 +33,31 @@
       </video>
       <div id="controlscontainer" style="display: flex;opacity:1;">
         <div id="timer">
+          <div id="time"class="currtime">0:00</div>
+          <div>&ensp;</div>
           <input id="progress" min="0" max="100" title="Seek" type="range" steps="any" value="0">
-                <div class="currtime">0:00</div>
-                <div>&ensp;/&ensp;</div>
-                <div class="totaltime">00:00</div>
+          <div>&ensp;</div>
+          <div id="time" class="totaltime">00:00</div>
         </div>
         <div id="controls">
+            <div id="vidctrl">
+            <div id="back" title="Seek Backward" style="color:rgba(255, 183, 0, 0.973)"><span class="material-symbols-rounded">replay_10</span></div>
+            <div title="Play"><strong><span  id="play_pause" class="material-symbols-rounded">play_arrow</span></strong></div>
+            <div id="forward" title="Seek Forward" style="color:rgba(0, 255, 153, 0.973)"><span class="material-symbols-rounded">forward_10</span></div>    
+            </div>
             
-            <div id="back" title="Seek Backward"><span class="material-symbols-rounded">fast_rewind</span>10</div>
-            <div id="play" style="display:flex;" title="Play"><strong><span class="material-symbols-rounded">play_arrow</span></strong></div>
-            <div id="pause" style="display:none;" title="Pause"><span class="material-symbols-rounded">pause</span></div>
-            <div id="forward" title="Seek Forward">10<span class="material-symbols-rounded">fast_forward</span></div>    
-            <div id="minip" style="display:flex;" title="Click to go in Picture in Picture Mode"><span class="material-symbols-rounded">pip</span></div>
-            <div id="fullscr" style="display:flex;"title="Click to enter Fullscreen Mode"><span id="enterfullscr" class="material-symbols-rounded">fullscreen</span></div>
-            <div id="exitfullscr" style="display:none;"title="Click for exiting Fullscreen Mode"><span class="material-symbols-rounded">fullscreen_exit</span></div>
-            <div id="voln" style="display:flex" title="Click to Mute"><span class="material-symbols-rounded">volume_up</span></div>
-            <div id="mute" style="display:none" title="Click to Unmute"><span class="material-symbols-rounded">volume_off</span></div>
-            <div id="volumectrl">
+            <div id="volbtns">
+            <div title="Click to Mute / Unmute"><span class="material-symbols-rounded"  id="voln">volume_up</span></div>
+            <div style="font-weight: 900;"> Volume : </div>
+            <div id="volumectrl">   
                 <div id="volval">100</div>
-                <div><input type="range" min="0" max="100" steps="any" value="100" id="volslider" title="Volume"></div>
+                <div><input type="range" min="0" max="100" steps="1" value="100" id="volslider" title="Volume"></div>
+            </div>
+            </div>
+
+            <div id="screenmode">
+            <div style="display:flex;" title="Click to go in Picture in Picture Mode"><span id="minip" class="material-symbols-rounded">pip</span></div>
+            <div style="display:flex;"title="Click to enter Fullscreen Mode"><span  id="fullscr" class="material-symbols-rounded">fullscreen</span></div>
             </div>
         </div>
     </div>

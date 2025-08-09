@@ -19,7 +19,7 @@ hr{background-color:#ffd0d0}#screen,#volval{align-self:center}
     height:30px;
 }
 #topline{width:80%;height:100%;display:flex;flex-direction: row;align-content: space-around;align-items: center;
-    justify-content: center;position: sticky;top:0;z-index: 1000;border-radius: 20px;background-color: rgba(0, 0, 0, 0.615);}
+    justify-content: center;position: sticky;top:0;z-index: 1000;border-radius: 0 0 20px 20px;background-color: rgba(0, 0, 0, 0.615);}
 #videonamediv,#screensizebox{width:50%;height:25px;color:#f0f8ff;text-align: center;}
 #timer,#volval,.ham{font-weight:700}
 hr{height:.2em;border-radius:20px}.VZ{margin:.25% 25%;width:50%}
@@ -52,37 +52,47 @@ body{background-color:rgb(236, 236, 236)
 #divscreen,#playlistbox,#video{display:flex;box-shadow: 0 0 2px 2px grey;object-fit: fill;}
 #header{background-color:#d3d3d3;width:100%;height:6.5vh;top:0;font-size:28px}
 #screendiv{display:flex;flex-direction:row;width:99%;height:86.5vh;z-index:100;padding:.5%;align-items: center;}
-#divscreen{width:65%;background-color:#000000;overflow:hidden;padding:0 0.5% 0.5% 0.5%;height:100%;border-radius: 0 0 0 0;justify-content: center;}
+#divscreen{width:62%;background-color:#000000;overflow:hidden;padding:0 0.5% 0.5% 0.5%;height:100%;border-radius: 0 0 0 0;justify-content: center;}
 #controls .material-symbols-rounded{font-variation-settings:'FILL' 0,'wght' 700,'GRAD' 0,'opsz' 35;}
 #screen{width:100%;height:100%;object-fit:contain;position:sticky;top:0;bottom:0;left:0;right:0;}
-#playlistbox{flex-direction:column;width:33%;height:85vh;background-color:transparent;padding:0.5%;overflow-y:scroll;border-radius: 0 10px 10px 0;}
+#playlistbox{flex-direction:column;width:38%;height:85vh;background-color:transparent;padding:0.5%;overflow-y:scroll;border-radius: 0 10px 10px 0;}
 #video{flex-direction:row;padding:.5%;align-items:center;align-content:center;justify-content:space-around;cursor:pointer;background-color:azure;margin:10px 5px}
 #video:hover{border:2px solid; border-color:red;background-color: rgba(255, 125, 140, 0.538);border-radius: 10px;}
 #Logo img{width:250px;height:200px;border-radius:10px;flex-shrink:inherit}
 #videoname{flex-shrink:inherit}
 #controlscontainer{display: flex;width:100%;flex-direction:column;background-color:rgba(0, 0, 0, 0.5);padding:0.1%,1%,1%,1%;position:sticky;
     bottom:0;margin:0 0 0 0;align-content: space-around;z-index: 1000;border-radius: 0px 0px 0px 0px;}
-#controls{display:flex;flex-direction:row;background-color:transparent;border-radius:20px;justify-content:space-around;flex-wrap: wrap;}
+#controls{display:flex;flex-direction:row;background-color:transparent;border-radius:20px;justify-content:space-between;flex-wrap:wrap;}
 ::-webkit-scrollbar{width:10px;border-radius:0 10px 10px 0}
 ::-webkit-scrollbar-thumb{background-color:#00f;border-radius:10px}
 ::-webkit-scrollbar-track{background-color:#8a8a8a;border-radius:0 10px 10px 0}
-#back,#forward,#fullscr,#exitfullscr,#minip,#mute,#pause,#play,#voln{width:35px;height:25px;cursor:pointer;display: flex;
+#back,#forward,#fullscr,#minip,#mute,#pause,#play_pause,#voln{width:35px;height:25px;cursor:pointer;display: flex;
     text-align:center;vertical-align:baseline;overflow:hidden;position:static;padding:3px;color:#ffffff;border-radius: 5px;align-items: center;justify-content: center;
 }
-#back:hover,#forward:hover,#fullscr:hover,#exitfullscr:hover,#minip:hover,#mute:hover,#pause:hover,#play:hover,#voln:hover{padding:3px;border-radius:50%;}
-#volumectrl{display:flex;align-items:center;justify-content:center;justify-items:center;height:25px;padding:5px 5px;border-radius: 5px;}
-#volslider{display:none;width:100px;transition:450ms ease-in-out;z-index:2;height:10px;accent-color:rgb(255, 255, 255) ; vertical-align: middle;}
+#back:active{rotate:-90deg ;}#forward:active{rotate:90deg ;}
+#back:hover,#forward:hover,#fullscr:hover,#exitfullscr:hover,#minip:hover,#mute:hover,#pause:hover,#play_pause:hover,#voln:hover{padding:3px;border-radius:50%;}
+#volumectrl{display:flex;flex-direction: row;align-items:center;justify-content:center;justify-items:center;height:25px;padding:5px 5px;border-radius: 5px;color: #fff;}
+#volslider{display:none;width:100px;transition:450ms ease-in-out;z-index:2;height:10px;accent-color:rgb(255, 255, 0) ; vertical-align: middle;}
 #volval{font-size:"12px";color:#ffffff;padding:3px;width:50px;height:25px;text-align:center;vertical-align: middle;display: flex;align-items: center;justify-content: center;}
 #volslider:focus-within,#volumectrl:hover #volslider{display:block;cursor:pointer;background-color:#fff}
 #volumectrl:hover{border-radius:25px}
-#progress{width:inherit;height:3px;margin:10px;border-radius:50%;accent-color:rgb(0, 94, 255);align-self: center;}
+#progress{width:inherit;height:3px;margin:10px;border-radius:50%;
+        animation-name:accentColor;
+        animation: infinite;
+        accent-color:rgb(0, 242, 255);
+        animation-duration: 5s;
+        align-self: center;}
 #progress:hover{height:5px;cursor:pointer;accent-color: rgb(255, 0, 0);}
-#timer{background-color: rgba(255, 255, 255, 0.7);width: 98%;display:flex;justify-self: center;align-self: center;align-items: center;align-content:center;border-radius:10px;z-index:150;color:#000000;height:25px;padding:0.5% 1%;}
+#timer{background-color: rgba(0, 0, 0, 0);width: 98%;display:flex;justify-self: center;align-self: center;align-items: center;align-content:center;border-radius:10px;z-index:150;color:#ffffff;height:25px;padding:0.5% 1%;}
 #video:fullscreen{z-index:3}
 #videoname img{width:30px;height:30px;vertical-align: middle;}
-#controlon ,#controloff{cursor: pointer;padding:5px;transition: all ease-in-out 1s;width:25px;height:25px;color: rgb(255, 255, 255);align-items: center;align-content: center;
+#controloff{cursor: pointer;padding:5px;transition: all ease-in-out 1s;width:25px;height:25px;color: rgb(255, 255, 255);align-items: center;align-content: center;
     text-align:center;justify-content: center;border-radius: 10px;z-index: 1000;margin:8px;
-    position: sticky;top:calc(2%);right:calc(1%);left:calc(95%);}
+    animation: infinite;
+    animation-duration: 5s;
+    animation-name: border_Animation;
+    position: sticky;top:calc(2%);
+    right:calc(1%);left:calc(95%);}
 #controloff{color: rgb(255, 255, 255);}
 #toplinecontainer{
     margin:0;
@@ -94,6 +104,30 @@ body{background-color:rgb(236, 236, 236)
     justify-content: center;
     z-index: 1000;
 }
+#vidctrl,#screenmode,#volbtns{display: flex;flex-direction: row;color: #ffffff;align-items: center;
+/* animation: infinite;
+animation-duration: 5s;
+animation-name: border_Animation;
+border-radius: 10px;
+border: 5px solid; */
+background-color: #00000075;
+}
+/* @keyframes border_Animation{
+    0%   {border:5px rgb(255, 255, 0) solid;}
+    20%  {border:5px rgb(255, 0, 0) solid;  }
+    40%  {border:5px rgb(43, 255, 0) solid; }
+    60%  {border:5px rgb(0, 47, 255) solid; }
+    80%  {border:5px rgb(255, 0,17) solid;}
+    100% {border:5px rgb(0, 255,195) solid;}
+} */
+/* @keyframes accentColor{
+    0%   {background-color: yellow;}
+    20%  {background-color:red}
+    40%  {background-color:green}
+    60%  {background-color:blue}
+    80%  {background-color:magenta}
+    100% {background-color:white}
+} */
 /* #screendiv:hover #controlscontainer,#screen:hover #controlscontainer{
     bottom:0;
     transition: all ease-in-out 0.5s;
@@ -101,7 +135,7 @@ body{background-color:rgb(236, 236, 236)
 #screendiv:hover #topline,#screen:hover #topline{
     top:0;transition: all ease-in-out 0.5s;
 } */
-@media screen and (max-width:980px)
+@media screen and (max-width:990px)
 {
     .VZ img,.navigation img,.socialButtons img{
         height:30px;
@@ -115,8 +149,8 @@ body{background-color:rgb(236, 236, 236)
 }
 @media screen and (min-width:250px) and (max-width:600px) and (min-height:500px){
     .material-symbols-rounded{font-variation-settings:'FILL' 1,'wght' 700,'GRAD' 0,'opsz' 8;font-size:10px ;text-align:center;vertical-align:baseline;}
-    #back,#forward,#fullscr,#exitfullscr,#minip,#mute,#pause,#play,#voln{width:35px;height:25px;cursor:pointer;text-align:center;vertical-align:baseline;overflow:hidden;position:static;padding:3px;color:#ffffff}
-    #back:hover,#forward:hover,#fullscr:hover,#exitfullscr:hover,#minip:hover,#mute:hover,#pause:hover,#play:hover,#voln:hover{border-radius:5px;background-color:transparent;box-shadow:none}
+    #back,#forward,#fullscr,#exitfullscr,#minip,#mute,#pause,#play_pause,#voln{width:35px;height:25px;cursor:pointer;text-align:center;vertical-align:baseline;overflow:hidden;position:static;padding:3px;color:#ffffff}
+    #back:hover,#forward:hover,#fullscr:hover,#exitfullscr:hover,#minip:hover,#mute:hover,#pause:hover,#play_pause:hover,#voln:hover{border-radius:5px;background-color:transparent;box-shadow:none}
     #volval{font-size:"12px";color:#ffffff;padding:3px;width:50px;height:25px;text-align:center;vertical-align: text-bottom;display: flex;align-items: center;justify-content: center;}
     *{font-size: 10px;text-align: center;vertical-align: middle;}
     #divscreen,#screendiv{flex-direction:column;display:flex;align-content:space-evenly;}
@@ -138,17 +172,18 @@ body{background-color:rgb(236, 236, 236)
     #controlon,#controloff {font-variation-settings:'FILL' 1,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: rgb(255, 255, 255);}
     #controloff {font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz'20;}
 }
-@media screen and (min-width:500px) and (max-width:1000px) and (max-height:500px){
+@media screen and (min-width:500px) and (max-width:990px) and (max-height:500px){
+    *{font-size: 10px;text-align: center;vertical-align: middle;}
     #divscreen,#playlistbox{display:flex;height:96vh}
     #screendiv{display:flex;flex-direction:row}
     #header{text-align:center;background-color:#d3d3d3;width:100%;height:4vh;position:sticky;top:0;font-size:14px}
-    #divscreen{flex-direction:column;width:80%;background-color:#000000;position:sticky;top:4vh;border-radius:0;}
+    #divscreen{flex-direction:column;width:70%;background-color:#000000;position:sticky;top:4vh;border-radius:0;}
     #screen{width:100%;height:100vh;align-self:center;margin:.5%}
     #video{display:flex;flex-direction:column;width:97%;margin:3px 2px}
     #Logo img{width:70px;height:50px}
     #videoname{padding:1%;vertical-align:middle;flex-shrink:inherit;font-size:10px}
     #videoname img{width:30px;height:30px;vertical-align: middle;}
-    #playlistbox{flex-direction:column;overflow-x:hidden;overflow-y:scroll;width:20%;align-items:center;border-radius: 0;}
+    #playlistbox{flex-direction:column;overflow-x:hidden;overflow-y:scroll;width:30%;align-items:center;border-radius: 0;}
     ::-webkit-scrollbar{height:8px;border-radius:0 10px 10px 0}
     ::-webkit-scrollbar-thumb{background-color:#000}
     ::-webkit-scrollbar-track{background-color:rgba(255,255,255,.925);border-radius:0 10px 10px 0}
@@ -156,35 +191,44 @@ body{background-color:rgb(236, 236, 236)
     .socialButtons{width:fit-content;height:fit-content;}
     #controlon,#controloff {font-variation-settings:'FILL' 1,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: rgb(255, 255, 255);}
     #controloff {font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz'20;}
+    #controls,#controlscontainer{display:flex;width:100%;opacity:1;border:none;padding:5px 0;align-content:center;text-align:center;vertical-align:middle}
+
 
 }
-@media screen and (min-width:600px) and (max-width:1200px)and (min-height:600px) and (max-height:1300px){
+@media screen and (min-width:600px) and (max-width:990px)and (min-height:600px) and (max-height:1300px){
     #divscreen,#screendiv{flex-direction:column;display:flex}
     #divscreen,#header{width:100%;position:sticky}
     #screen,
-    *{padding:0}*{margin:0}
+    *{font-size: 10px;text-align: center;vertical-align: middle;margin:0; padding:0;}
+
     #header{text-align:center;background-color:#d3d3d3;height:4vh;top:0;font-size:14px}
-    #divscreen{height:65vh;background-color:#000000;top:4vh;border-radius:0;}
+    #divscreen{width:99%;height:65vh;background-color:#000000;top:4vh;border-radius:0;}
     #screen{width:100%;height:100vh;background-color:#000;align-self:center;margin:.5%}
     #playlistbox{display:flex;flex-direction:column;overflow-y:scroll;width:99%;align-items:center;height:30vh;border-radius: 0;}
     ::-webkit-scrollbar{width:8px;border-radius:0 0 10px 10px}
     ::-webkit-scrollbar-thumb{background-color:#00f}
     ::-webkit-scrollbar-track{background-color:rgba(0,183,255,.5);border-radius:0 10px 10px 0}
     #controls,#controlscontainer{display:flex;width:100%;opacity:1;border:none;padding:5px 0;align-content:center;text-align:center;vertical-align:middle}
+    #back,#forward,#fullscr,#exitfullscr,#minip,#mute,#pause,#play_pause,#voln{width:fit-content;height:fit-content;cursor:pointer;align-content:center;align-items:center;text-align:center;
+        vertical-align:middle;background-color:transparent;border-radius:2px;position:relative;margin:0 3px}
+    #back:hover,#forward:hover,#fullscr:hover,#exitfullscr:hover,#minip:hover,#mute:hover,#pause:hover,#play_pause:hover,#voln:hover{border-radius:50%;padding:3px}
+
     #video{display:flex;flex-direction:row;width:95%}
     #Logo img{width:150px;height:120px}
     #controlscontainer{width:100%;flex-direction: column;z-index:1;height:15%;align-items:center;background-color:rgba(0, 0, 0, 0.601);color:#ffffff}
     #controls{flex-direction:row;height:75%;justify-content:space-evenly;justify-items:center;align-items:center;z-index:100000000;transition:opacity 150ms ease-in-out;border-radius:0;background-color:transparent}
-    #back,#forward,#fullscr,#exitfullscr,#minip,#mute,#pause,#play,#voln{width:25px;height:25px;cursor:pointer;align-content:center;align-items:center;text-align:center;
-        vertical-align:middle;background-color:transparent;overflow:hidden;border-radius:2px;position:relative;padding:3px;margin:0 3px}
-    #back:hover,#forward:hover,#fullscr:hover,#exitfullscr:hover,#minip:hover,#mute:hover,#pause:hover,#play:hover,#voln:hover{border-radius:50%;padding:3px}
+    #back,#forward,#fullscr,#exitfullscr,#minip,#mute,#pause,#play_pause,#voln{width:30px;height:30px;cursor:pointer;align-content:center;align-items:center;text-align:center;
+        vertical-align:middle;background-color:transparent;border-radius:2px;position:relative;padding:3px;margin:0 3px}
+    #back:hover,#forward:hover,#fullscr:hover,#exitfullscr:hover,#minip:hover,#mute:hover,#pause:hover,#play_pause:hover,#voln:hover{border-radius:50%;padding:3px}
     #volval{font-size:7;color:#ffffff;border-radius:25px; vertical-align: middle;text-align: center;display: flex;align-items: center;justify-content: center;}
     #video:fullscreen{z-index:3}
-    #progress{height:2px;width:75%;margin-left:1%;margin-right:1%}
+    #progress{height:2px;width:95%;margin-left:1%;margin-right:1%}
     #progress:hover{height:5px}
     #videoname img{width:30px;height:30px;vertical-align: middle;}
     .socialButtons button{width:15em;height:5em;padding:1%;border-radius:20px;font-size:10px;border-color:#383838;background-color:#fff;color:#00f;justify-content: center;}
     .socialButtons{width:fit-content;height:fit-content;}
     #controlon,#controloff {font-variation-settings:'FILL' 1,'wght' 300,'GRAD' 0,'opsz'20;transition: all ease-in-out 1s;width:25px;height:25px;color: rgb(255, 255, 255);}
     #controloff {font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz'20;}
+
+
 }

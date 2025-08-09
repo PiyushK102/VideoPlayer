@@ -1,5 +1,4 @@
-const playbtn=document.querySelector("#play");
-const pausebtn=document.querySelector("#pause");
+const playbtn=document.querySelector("#play_pause");
 const forward=document.querySelector("#forward");
 const back=document.querySelector("#back");
 const Video= document.querySelector("#screen");
@@ -17,12 +16,7 @@ const seekbar=document.querySelector("#progress");
 const playlistbutton=document.querySelector("#playlistbutton")
 const VideoList=document.querySelector("#playlistbox")
 const videoname=document.querySelector("#videonamediv")
-const ham=document.querySelector(".ham")
-const nav=document.querySelector(".navButtons")
-const hamsym=document.querySelector("#hamsym")
-const closebtn=document.querySelector("#close")
-const closefscreen=document.querySelector("#exitfullscr")
-const Social=document.querySelector(".Social")
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -123,35 +117,38 @@ function changevideo(e){
 
 playbtn.addEventListener("click" , togglePlayPause)
 Video.addEventListener("click",togglePlayPause) 
-pausebtn.addEventListener("click",togglePlayPause)
 
 
 function togglePlayPause(){
     if(Video.paused==true)
     {
         Video.play()
-        pausebtn.style.display="flex"
-        playbtn.style.display="none"
+        playbtn.innerHTML="pause"
+        playbtn.title="Pause"
+        playbtn.style.color="red"
 
     }
     else{
         Video.pause()
-        playbtn.style.display="flex"
-        pausebtn.style.display="none"
+        playbtn.innerHTML="play_arrow"
+        playbtn.title="Play"
+        playbtn.style.color="rgb(43, 255, 0)"
     }   
 }
 function controldisplay(btn){
     if (document.getElementById(btn).style.opacity ==0) {
         document.getElementById(btn).style.opacity = 1;
         document.getElementById("topline").style.opacity=1
-        document.getElementById("controlon").style.display="none"
-        document.getElementById("controloff").style.display="flex"
+        document.getElementById("controloff").innerHTML="lock_open_right"
+        document.getElementById("controloff").title="Hide Controls?"
+        document.getElementById("controloff").style.color="red"
         } 
     else {
         document.getElementById(btn).style.opacity = 0;
-        document.getElementById("controlon").style.display="flex"
         document.getElementById("topline").style.opacity=0
-        document.getElementById("controloff").style.display="none"
+        document.getElementById("controloff").innerHTML="lock"
+        document.getElementById("controloff").title="Unhide Controls?"
+        document.getElementById("controloff").style.color="rgba(0, 255, 123, 1)"
     } 
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -160,30 +157,28 @@ function controldisplay(btn){
 
 ///////////////////////////////////------FullScreen Button--------/////////////////////////////////////
 fullscrbtn.addEventListener("click",fullscreen)
-closefscreen.addEventListener("click",fullscreen)
 Video.addEventListener("dblclick",fullscreen)
 document.addEventListener("fullscreenchange",()=>{
     if(document.fullscreenElement==null || document.fullscreenEnabled==false){
-        closefscreen.style.display="none"
-        fullscrbtn.style.display="flex"
+        fullscrbtn.innerHTML="fullscreen"
     }
     else{
-        closefscreen.style.display="flex"
-        fullscrbtn.style.display="none"
+        fullscrbtn.innerHTML="fullscreen_exit"
     }
 })
 function fullscreen(){
     if(document.fullscreenElement!=null || document.fullscreenEnabled==false)
     {
-         document.exitFullscreen()
-         closefscreen.style.display="none"
-         fullscrbtn.style.display="flex"
+        document.exitFullscreen()
+        fullscrbtn.innerHTML="fullscreen"
+        fullscrbtn.style.color="rgba(0, 255, 191, 1)"
     }
     else
     {
-         Videocontainer.requestFullscreen()
-         closefscreen.style.display="flex"
-         fullscrbtn.style.display="none"
+        Videocontainer.requestFullscreen()
+        fullscrbtn.innerHTML="fullscreen_exit"
+        fullscrbtn.style.color="rgba(255, 0, 149, 1)"
+         
     }
  }
 ///////////////////////////////////------MiniPlayer Button--------/////////////////////////////////////
@@ -191,47 +186,84 @@ mpbtn.addEventListener("click",pipmode)
 function pipmode() {
     if (document.pictureInPictureElement) {
             document.exitPictureInPicture();
+            mpbtn.innerHTML="pip"
+            mpbtn.style.color="rgba(0, 255, 191, 1)"
         }
     else {
             Video.requestPictureInPicture();
+            mpbtn.innerHTML="pip_exit"
+            mpbtn.style.color="rgba(255, 0, 221, 1)"
         }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////----Volume----/////////////////////////////////////////////////////
-mute.addEventListener("click",toggleMute)
+
 volvalue.addEventListener("click",toggleMute)
 vol.addEventListener("input",e =>{
     Video.volume=(e.target.value)/100
     Video.muted=e.target.value===0
     volval.innerHTML=Math.round((Video.volume)*100)
-    if(vol.value==0){
-        mute.style.display="flex"
-        volvalue.style.display="none"
+    if(vol.value==0 || volval==0){
         volval.innerHTML="Muted"
+        volvalue.innerHTML="volume_off"
+        document.getElementById("volbtns").style.color="red"
+        volvalue.style.color="red"
+        volval.style.color="red"
+        vol.style.accentColor="red"
 
     }
-    else{
-        mute.style.display="none"
-        volvalue.style.display="flex"
+    else if ( vol.value>0 && vol.value<=66){
+
         volval.innerHTML=Math.round((Video.volume)*100);
+        volvalue.innerHTML="volume_down"
+        document.getElementById("volbtns").style.color="rgba(0, 255, 191, 1)"
+        volvalue.style.color="rgba(0, 255, 191, 1)"
+        volval.style.color="rgba(0, 255, 191, 1)"
+        vol.style.accentColor="rgba(0, 255, 191, 1)"
+    }
+    else{
+        
+        volval.innerHTML=Math.round((Video.volume)*100);
+        volvalue.innerHTML="volume_up"
+        volvalue.style.color="rgba(48, 190, 247, 1)"
+        document.getElementById("volbtns").style.color="rgba(48, 190, 247, 1)"
+        volval.style.color="rgba(48, 190, 247, 1)"
+        vol.style.accentColor="rgba(48, 190, 247, 1)"
    }
 })
+
+
 function toggleMute()
 {
    Video.muted=!Video.muted
    if(Video.muted==true || Video.volume==0)
    {
-        mute.style.display="flex"
-        volvalue.style.display="none"
         vol.value="0"
         volval.innerHTML="Muted"
+        volvalue.innerHTML="volume_off"
+        document.getElementById("volbtns").style.color="red"
+        volvalue.style.color="red"
+        volval.style.color="red"
+        vol.style.accentColor="red"
    }
+    else if ( (volval>0 && volval<=66)){
+
+        volval.innerHTML=Math.round((Video.volume)*100);
+        volvalue.innerHTML="volume_down"
+        document.getElementById("volbtns").style.color="rgba(0, 255, 191, 1)"
+        volvalue.style.color="rgba(0, 255, 191, 1)"
+        volval.style.color="rgba(0, 255, 191, 1)"
+        vol.style.accentColor="rgba(0, 255, 191, 1)"
+    }
    else{
-        mute.style.display="none"
-        volvalue.style.display="flex"
         volval.innerHTML=Math.round((Video.volume)*100)
         vol.value=Math.round((Video.volume)*100)
+        volvalue.innerHTML="volume_up"
+        volvalue.style.color="rgba(48, 190, 247, 1)"
+        document.getElementById("volbtns").style.color="rgba(48, 190, 247, 1)"
+        volval.style.color="rgba(48, 190, 247, 1)"
+        vol.style.accentColor="rgba(48, 190, 247, 1)"
    }
 }
 function volpm(vvalue){
@@ -239,6 +271,31 @@ function volpm(vvalue){
     Video.volume+=vvalue/100
     vol.value=(Video.volume)*100
     volval.innerHTML=(vol.value)
+
+    if(volval.innerHTML=="0")
+   {
+        volvalue.innerHTML="volume_off"
+        document.getElementById("volbtns").style.color="red"
+        volvalue.style.color="red"
+        volval.style.color="red"
+        vol.style.accentColor="red"
+   }
+    else if ( (volval.innerHTML>0 && volval.innerHTML<=66)){
+
+        volvalue.innerHTML="volume_down"
+        document.getElementById("volbtns").style.color="rgba(0, 255, 191, 1)"
+        volvalue.style.color="rgba(0, 255, 191, 1)"
+        volval.style.color="rgba(0, 255, 191, 1)"
+        vol.style.accentColor="rgba(0, 255, 191, 1)"
+    }
+   else{
+        volvalue.innerHTML="volume_up"
+        volvalue.style.color="rgba(48, 190, 247, 1)"
+        document.getElementById("volbtns").style.color="rgba(48, 190, 247, 1)"
+        volval.style.color="rgba(48, 190, 247, 1)"
+        vol.style.accentColor="rgba(48, 190, 247, 1)"
+   }
+
 }
 //////////////////////////////////////////////////////////////////////////////////
 /////////////////--------ProgressBar-----------///////////////////////////////////
@@ -292,6 +349,8 @@ back.addEventListener("click",()=>{skip(-10)})
 function skip(duration){
     
     Video.currentTime+=duration
+    if(duration>0){forward.style.Tranform="rotate(270deg)"}
+    else{back.style.Tranform="rotate(-270deg)"}
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -300,7 +359,7 @@ document.addEventListener("keydown", e =>{
     switch(e.key.toLowerCase()){
         case " ":
         case "p":
-        case "f10":
+        case "VK_MEDIA_PLAY_PAUSE":
             togglePlayPause()
             break
         case "m":
