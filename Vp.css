@@ -46,9 +46,9 @@ li{list-style-type:none;margin-top:.08vw}
 .ham{position:sticky;text-align:center;align-self:flex-start;top:0;left:0;padding:1%;width:50px;height:50px}
 #Logo,#controls,#videoname,.ham{padding:1%}
 *{margin:0}
-body{background-color:rgb(236, 236, 236)
+body{background-color:rgb(22, 22, 22)
 }
-.ham{display:flex;justify-content:center;justify-items:center;align-items:center;align-content:center;font-size:12px;background-color:#ebebebb1;border-radius:50%;cursor:pointer;border:2px solid #b1b1b1}
+.ham{display:flex;justify-content:center;justify-items:center;align-items:center;align-content:center;font-size:12px;background-color:#ffffff;border-radius:50%;cursor:pointer;border:2px solid #b1b1b1}
 #divscreen,#playlistbox,#video{display:flex;box-shadow: 0 0 2px 2px grey;object-fit: fill;}
 #header{background-color:#d3d3d3;width:100%;height:6.5vh;top:0;font-size:28px}
 #screendiv{display:flex;flex-direction:row;width:99%;height:86.5vh;z-index:100;padding:.5%;align-items: center;}
@@ -66,22 +66,36 @@ body{background-color:rgb(236, 236, 236)
 ::-webkit-scrollbar{width:10px;border-radius:0 10px 10px 0}
 ::-webkit-scrollbar-thumb{background-color:#00f;border-radius:10px}
 ::-webkit-scrollbar-track{background-color:#8a8a8a;border-radius:0 10px 10px 0}
-#back,#forward,#fullscr,#minip,#mute,#pause,#play_pause,#voln{width:35px;height:25px;cursor:pointer;display: flex;
+#back,#forward,#fullscr,#minip,#mute,#play_pause,#voln{width:25px;height:25px;cursor:pointer;display: flex;
     text-align:center;vertical-align:baseline;overflow:hidden;position:static;padding:3px;color:#ffffff;border-radius: 5px;align-items: center;justify-content: center;
+    border-radius: 50%;
 }
+#play_pause{border: 3px solid rgb(0, 183, 255)}
 #back:active{rotate:-90deg ;}#forward:active{rotate:90deg ;}
 #back:hover,#forward:hover,#fullscr:hover,#exitfullscr:hover,#minip:hover,#mute:hover,#pause:hover,#play_pause:hover,#voln:hover{padding:3px;border-radius:50%;}
 #volumectrl{display:flex;flex-direction: row;align-items:center;justify-content:center;justify-items:center;height:25px;padding:5px 5px;border-radius: 5px;color: #fff;}
-#volslider{display:none;width:100px;transition:450ms ease-in-out;z-index:2;height:10px;accent-color:rgb(255, 255, 0) ; vertical-align: middle;}
+#volslider{
+  -webkit-appearance: none;appearance: none;
+  display:none;
+  width:100px;
+  height:100px;
+  transition:450ms ease-in-out;z-index:2;height:5px; 
+  vertical-align: middle;border-radius: 5px;
+  background:linear-gradient(90deg,red,orange,yellow,green,blue );
+}
 #volval{font-size:"12px";color:#ffffff;padding:3px;width:50px;height:25px;text-align:center;vertical-align: middle;display: flex;align-items: center;justify-content: center;}
-#volslider:focus-within,#volumectrl:hover #volslider{display:block;cursor:pointer;background-color:#fff}
+#volslider:focus-within,#volumectrl:hover #volslider{display:block;cursor:pointer;background-color:#fff;}
 #volumectrl:hover{border-radius:25px}
-#progress{width:inherit;height:3px;margin:10px;border-radius:50%;
+#progress{
+        -webkit-appearance: none;appearance: none;
+        width:inherit;height:3px;margin:10px;border-radius:5px;
         animation-name:accentColor;
         animation: infinite;
         accent-color:rgb(0, 242, 255);
         animation-duration: 5s;
-        align-self: center;}
+        align-self: center;
+        background:linear-gradient(90deg,violet,indigo,blue,green,yellow,orange,red );
+    }
 #progress:hover{height:5px;cursor:pointer;accent-color: rgb(255, 0, 0);}
 #timer{background-color: rgba(0, 0, 0, 0);width: 98%;display:flex;justify-self: center;align-self: center;align-items: center;align-content:center;border-radius:10px;z-index:150;color:#ffffff;height:25px;padding:0.5% 1%;}
 #video:fullscreen{z-index:3}
@@ -112,6 +126,15 @@ border-radius: 10px;
 border: 5px solid; */
 background-color: #00000075;
 }
+#volslider::-webkit-slider-thumb{  
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 20px;
+  border-radius: 10px 10px 0 0;
+  border: 2px solid lime;
+  background:radial-gradient(red,orange,yellow,green,blue,blue );}
+  
 /* @keyframes border_Animation{
     0%   {border:5px rgb(255, 255, 0) solid;}
     20%  {border:5px rgb(255, 0, 0) solid;  }
